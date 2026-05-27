@@ -267,7 +267,7 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     color: transparent !important;
-    display: inline-block;
+    display: inline;
 }
 
 .diverse-masonry-item .hr-feature-item__title {
