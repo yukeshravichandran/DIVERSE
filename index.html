@@ -121,11 +121,11 @@
       modal.style.display = "none";
     }
 
-    window.onclick = function (event) {
+    window.addEventListener("click", function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
       }
-    }
+    });
   </script>
   <script>
     jQuery(document).ready(function ($) {
@@ -1381,12 +1381,12 @@ The support team is responsive and helpful, ensuring that any queries are resolv
         document.getElementById("hrl-video-iframe").src = "";
       }
 
-      window.onclick = function (event) {
+      window.addEventListener("click", function (event) {
         let modal = document.getElementById("hrl-video-modal");
         if (event.target == modal) {
           hrlCloseModal();
         }
-      }
+      });
     </script>
   </main>
   <script>
