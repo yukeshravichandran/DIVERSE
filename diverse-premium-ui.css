@@ -90,6 +90,9 @@ h6,
 
 .diverse-hero-actions .hrl-btn {
     margin: 0 !important; /* Ensure no inherited margins break the center alignment */
+    border-radius: 0 !important; /* Sharp edges without bulged edges */
+    border: none !important; /* No extra borders */
+    box-shadow: none !important; /* Flat modern aesthetic */
 }
 
 /* 3. Glassmorphic Panels (Replacing old Modules) */
