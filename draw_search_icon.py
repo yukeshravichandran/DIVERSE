@@ -7,10 +7,10 @@ img = Image.new("RGBA", (32, 32), (255, 255, 255, 0))
 draw = ImageDraw.Draw(img)
 
 # Draw the magnifying glass circle (outline only, completely transparent inside)
-draw.ellipse((4, 4, 22, 22), outline="white", width=3)
+draw.ellipse((4, 4, 22, 22), outline="#00d2ff", width=3)
 
 # Draw the handle
-draw.line((18, 18, 28, 28), fill="white", width=3)
+draw.line((18, 18, 28, 28), fill="#00d2ff", width=3)
 
 # Save to the website directory, overwriting the old AI generated one
 img.save(dest_path, "PNG")
