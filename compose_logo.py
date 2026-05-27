@@ -45,7 +45,7 @@ emblem = emblem.resize((target_width, target_height), Image.Resampling.LANCZOS)
 
 # 4. Create text image
 print("Rendering text...")
-text = "diverse"
+text = "DIVERSE"
 font_size = 140
 font = ImageFont.truetype(font_path, font_size)
 
