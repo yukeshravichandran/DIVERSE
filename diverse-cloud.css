@@ -117,3 +117,16 @@ img {
 svg, img[src$=".svg"], .hrl-owl-carousel-navigation, .hr-feature-item__icon-container {
     display: none !important;
 }
+/* Nuke all third-party chat widgets, WhatsApp floaters, and Help icons */
+[id^="zsiq"], [class^="zsiq"],
+[id^="zopim"], [class^="zopim"],
+[id^="hubspot"], [class^="hubspot"],
+[id^="intercom"], [class^="intercom"],
+[id^="tawk"], [class^="tawk"],
+[id^="crisp"], [class^="crisp"],
+[class*="wa-float"], [class*="whatsapp"], 
+a[href*="whatsapp.com"], a[href*="wa.me"],
+iframe[src*="chat"], iframe[src*="widget"], iframe[src*="zohopublic"], iframe[src*="tawk"], iframe[src*="crisp"],
+.help-icon, .support-icon, .floating-button, #whatsapp-widget {
+    display: none !important;
+}
