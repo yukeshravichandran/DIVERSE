@@ -254,6 +254,7 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
 
 /* 4. Enhanced Typography & Hero Styles */
 .diverse-hero-title {
+    font-family: 'Cinzel', serif !important;
     font-size: 4.5rem !important;
     font-weight: 800 !important;
     line-height: 1.1 !important;
