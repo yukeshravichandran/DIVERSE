@@ -5,11 +5,24 @@
 */
 
 /* 1. Global Typography */
-body, html, p, span, li, label, div {
+body,
+html,
+p,
+span,
+li,
+label,
+div {
     font-family: 'Inter', sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hrl-hero-title,
+.diverse-hero-title {
     font-family: 'Outfit', sans-serif !important;
     font-weight: 800 !important;
     letter-spacing: -1px !important;
@@ -31,7 +44,7 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
     left: 50%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(14,165,233,0.3) 0%, rgba(2,132,199,0) 70%);
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.3) 0%, rgba(2, 132, 199, 0) 70%);
     transform: translate(-50%, -50%);
     z-index: -1;
     filter: blur(60px);
@@ -40,8 +53,15 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
 }
 
 @keyframes pulseOrb {
-    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
-    100% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.3);
+        opacity: 1;
+    }
 }
 
 .diverse-hero-title {
@@ -82,7 +102,8 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
 }
 
 .panel-variant-1 {
-    flex-direction: row-reverse; /* Alternate layout */
+    flex-direction: row-reverse;
+    /* Alternate layout */
     background: rgba(241, 245, 249, 0.6) !important;
 }
 
@@ -170,7 +191,7 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
 /* Make every 2nd and 3rd item span taller or wider for an asymmetric look */
 .diverse-masonry-item:nth-child(2n) {
     grid-row: span 2;
-    background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(224,242,254,0.7)) !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(224, 242, 254, 0.7)) !important;
 }
 
 .diverse-masonry-item:hover {
@@ -186,7 +207,7 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
     padding: 50px !important;
     margin: 20px !important;
     border: 1px solid rgba(255, 255, 255, 0.9) !important;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05) !important;
 }
 
 /* Responsive adjustments */
@@ -195,9 +216,11 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
         flex-direction: column;
         padding: 30px;
     }
+
     .panel-variant-1 {
         flex-direction: column;
     }
+
     .diverse-hero-title {
         font-size: 3.5rem !important;
     }
@@ -213,8 +236,8 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
     background: transparent !important;
 }
 
-.hrl-modules__screenshot, 
-.hrl-hero__lead-image, 
+.hrl-modules__screenshot,
+.hrl-hero__lead-image,
 .hrl-hero__lead-image-2,
 .hrl-hero__lead-image-3,
 .diverse-media-img {
@@ -225,7 +248,8 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
     bottom: auto !important;
     height: auto !important;
     max-width: 100% !important;
-    transform: none; /* override old transform if any */
+    transform: none;
+    /* override old transform if any */
 }
 
 /* Restore the 3D hover effect we added, but ensure it's not overridden by Horilla */
@@ -250,14 +274,20 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
 }
 
 /* 4. Enhanced Typography & Hero Styles */
+.hr-header__logo {
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
 .diverse-hero-title {
     font-family: 'Cinzel', serif !important;
     font-size: 4.5rem !important;
     font-weight: 800 !important;
     line-height: 1.1 !important;
     margin-bottom: 25px !important;
-    color: #9f74d6 !important;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+    color: #666fd9 !important;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
 }
 
 .hrl-hero__highlight {
@@ -286,11 +316,13 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
 
 /* Prevent overlapping text by ensuring flex wraps and limits widths */
 .diverse-glass-panel {
-    flex-wrap: wrap; /* Allows stacking if too narrow */
+    flex-wrap: wrap;
+    /* Allows stacking if too narrow */
 }
 
 /* Make sure text doesn't flow outside the cards */
-.diverse-card, .diverse-masonry-item {
+.diverse-card,
+.diverse-masonry-item {
     overflow: hidden;
     word-wrap: break-word;
 }
@@ -299,5 +331,3 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
 * {
     box-sizing: border-box;
 }
-
-
