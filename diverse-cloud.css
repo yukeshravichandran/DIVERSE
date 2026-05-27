@@ -94,7 +94,7 @@ img[src*="horilla-logo"],
 
 .diverse-custom-logo {
     display: inline-block !important;
-    height: 55px !important;
+    height: 40px !important;
     width: auto !important;
     vertical-align: middle !important;
     margin-top: -5px; /* slight vertical alignment bump */
