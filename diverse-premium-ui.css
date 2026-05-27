@@ -281,20 +281,20 @@ h6,
     padding: 0 !important;
 }
 
-.hr-blog-search-icon {
+.hr-blog-search-icon,
+.hr-blog-search-icon:hover,
+.hr-blog-search-icon:active,
+.hr-blog-search-icon:focus,
+.hr-blog-search-icon ion-icon {
     background: transparent !important;
+    background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
     color: #ffffff !important;
     border-radius: 0 !important;
-}
-
-.hr-blog-search-icon:hover {
-    background: transparent !important;
+    outline: none !important;
     transform: none !important;
-    box-shadow: none !important;
-    color: #00d2ff !important;
 }
 .diverse-hero-title {
     font-family: 'Cinzel', serif !important;
