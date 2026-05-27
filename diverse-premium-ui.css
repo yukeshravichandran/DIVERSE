@@ -47,9 +47,6 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
 .diverse-hero-title {
     font-size: 5rem !important;
     line-height: 1.1 !important;
-    background: linear-gradient(90deg, #0284c7, #8b5cf6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
 

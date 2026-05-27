@@ -1,132 +1,162 @@
 <!DOCTYPE html>
 
-<html lang="en-US" prefix="og: https://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<html lang="en-US" prefix="og: https://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"
+  xmlns:og="http://opengraphprotocol.org/schema/">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="wp-content/themes/diverse-wp-theme-main/assets/images/brand/diverse-logo-icon.ico" rel="shortcut icon" type="image/x-icon"/>
-<link href="wp-content/themes/diverse-wp-theme-main/assets/css/style.min.css" rel="preload"/>
-<!-- -->
-<link href="diverse-core.css" rel="stylesheet"/>
-<link href="diverse-cloud.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@500;700;800&amp;family=Cinzel:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="diverse-premium-ui.css" rel="stylesheet"/></head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="wp-content/themes/diverse-wp-theme-main/assets/images/brand/diverse-logo-icon.ico" rel="shortcut icon"
+    type="image/x-icon" />
+  <link href="wp-content/themes/diverse-wp-theme-main/assets/css/style.min.css" rel="preload" />
+  <!-- -->
+  <link href="diverse-core.css" rel="stylesheet" />
+  <link href="diverse-cloud.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Outfit:wght@500;700;800&amp;family=Cinzel:wght@400;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="diverse-premium-ui.css" rel="stylesheet" />
+</head>
+
 <body>
-<div class="ad-close-btn">
-<button aria-label="Close" class="close-btn-icon" id="close-btn">
-<ion-icon class="close-icon" name="close-outline"></ion-icon>
-</button>
-</div>
-<header class="hr-header">
-<div class="hr-container hr-header__container">
-<a href="index.html">
-<img alt="Diverse" class="hr-header__logo" height="40" src="wp-content/themes/diverse-wp-theme-main/assets/images/brand/diverse-logo.png" width="250"/>
-</a>
-<div class="hr-header__menu-icon-search">
-<button class="hr-blog-search-icon" id="searchBtn"><ion-icon name="search-outline"></ion-icon></button>
-<a class="hr-header__menu-icon-btn" href="#" role="button">
-<ion-icon class="hr-header__menu-icon" id="openMenu" name="reorder-two-sharp"></ion-icon>
-<ion-icon class="hr-header__menu-icon hr-header__menu-icon--hide" id="closeMenu" name="close-sharp"></ion-icon>
-</a>
-<nav class="hr-header__nav hr-header__nav--hide">
-<div class="hr-main-navigation-container"><ul class="hr-main-navigation" id="menu-main-navigation"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-738 active" id="menu-item-738"><a href="/">Home</a></li>
-<li class="new-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-12152" id="menu-item-12152"><a href="index.htmlcrm/">CRM</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children menu-item-12134 active" id="menu-item-12134"><span class="menu-label">Features</span>
-<ul class="sub-menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1199" id="menu-item-1199"><a href="index.htmlfeatures/">HR</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12137" id="menu-item-12137"><a href="index.htmlcrm-features/">CRM</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-739" id="menu-item-739"><a href="http://docs.diverse.com/">Docs</a></li>
-<li class="new-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-11248" id="menu-item-11248"><a href="https://cloud.diverse.com/">Cloud</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6433" id="menu-item-6433"><a href="/blogs/">Blogs</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6434" id="menu-item-6434"><a href="/videos/">Videos</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children menu-item-11595 active" id="menu-item-11595"><span class="menu-label">Pricing</span>
-<ul class="sub-menu">
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9996" id="menu-item-9996"><a href="index.htmlpricing/">Support</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11598" id="menu-item-11598"><a href="index.htmlimplementation/">Implementation</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6435" id="menu-item-6435"><a href="/contact-us/">Contact Us</a></li>
-</ul></div> </nav>
-</div>
-</div>
-</header>
-<div class="modal style-scrollbar" id="searchModal">
-<div class="modal-content">
-<span class="close"></span>
-<form id="searchform" method="get" role="search">
-<input autocomplete="off" id="live-search" name="s" placeholder="Search..." type="text"/>
-</form>
-<div id="search-results"></div> <!-- Add this for AJAX results -->
-</div>
-</div>
-<script>
-      document
-        .getElementById("close-btn")
-        .addEventListener("click", function () {
-          const banner = document.getElementById("ad-banner");
-          banner.style.opacity = "0";
-          banner.style.height = "0px";
-          setTimeout(function () {
-            banner.style.display = "none";
-          }, 500);
-        });
-    </script>
-<script>
-  var modal = document.getElementById("searchModal");
+  <div class="ad-close-btn">
+    <button aria-label="Close" class="close-btn-icon" id="close-btn">
+      <ion-icon class="close-icon" name="close-outline"></ion-icon>
+    </button>
+  </div>
+  <header class="hr-header">
+    <div class="hr-container hr-header__container">
+      <a href="index.html">
+        <img alt="Diverse" class="hr-header__logo" height="40"
+          src="wp-content/themes/diverse-wp-theme-main/assets/images/brand/diverse-logo.png" width="250" />
+      </a>
+      <div class="hr-header__menu-icon-search">
+        <button class="hr-blog-search-icon" id="searchBtn"><ion-icon name="search-outline"></ion-icon></button>
+        <a class="hr-header__menu-icon-btn" href="#" role="button">
+          <ion-icon class="hr-header__menu-icon" id="openMenu" name="reorder-two-sharp"></ion-icon>
+          <ion-icon class="hr-header__menu-icon hr-header__menu-icon--hide" id="closeMenu"
+            name="close-sharp"></ion-icon>
+        </a>
+        <nav class="hr-header__nav hr-header__nav--hide">
+          <div class="hr-main-navigation-container">
+            <ul class="hr-main-navigation" id="menu-main-navigation">
+              <li
+                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-738 active"
+                id="menu-item-738"><a href="/">Home</a></li>
+              <li class="new-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-12152"
+                id="menu-item-12152"><a href="index.htmlcrm/">CRM</a></li>
+              <li
+                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children menu-item-12134 active"
+                id="menu-item-12134"><span class="menu-label">Features</span>
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1199"
+                    id="menu-item-1199"><a href="index.htmlfeatures/">HR</a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12137"
+                    id="menu-item-12137"><a href="index.htmlcrm-features/">CRM</a></li>
+                </ul>
+              </li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-739" id="menu-item-739"><a
+                  href="http://docs.diverse.com/">Docs</a></li>
+              <li class="new-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-11248"
+                id="menu-item-11248"><a href="https://cloud.diverse.com/">Cloud</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6433" id="menu-item-6433"><a
+                  href="/blogs/">Blogs</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6434" id="menu-item-6434"><a
+                  href="/videos/">Videos</a></li>
+              <li
+                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children menu-item-11595 active"
+                id="menu-item-11595"><span class="menu-label">Pricing</span>
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9996"
+                    id="menu-item-9996"><a href="index.htmlpricing/">Support</a></li>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11598"
+                    id="menu-item-11598"><a href="index.htmlimplementation/">Implementation</a></li>
+                </ul>
+              </li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6435" id="menu-item-6435"><a
+                  href="/contact-us/">Contact Us</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="modal style-scrollbar" id="searchModal">
+    <div class="modal-content">
+      <span class="close"></span>
+      <form id="searchform" method="get" role="search">
+        <input autocomplete="off" id="live-search" name="s" placeholder="Search..." type="text" />
+      </form>
+      <div id="search-results"></div> <!-- Add this for AJAX results -->
+    </div>
+  </div>
+  <script>
+    document
+      .getElementById("close-btn")
+      .addEventListener("click", function () {
+        const banner = document.getElementById("ad-banner");
+        banner.style.opacity = "0";
+        banner.style.height = "0px";
+        setTimeout(function () {
+          banner.style.display = "none";
+        }, 500);
+      });
+  </script>
+  <script>
+    var modal = document.getElementById("searchModal");
 
-  var btn = document.getElementById("searchBtn");
+    var btn = document.getElementById("searchBtn");
 
-  var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close")[0];
 
-  var inputField = document.getElementById("s");
+    var inputField = document.getElementById("s");
 
-  btn.onclick = function() {
-    modal.style.display = "block";
-    inputField.focus(); // Set focus on the input field
-  }
+    btn.onclick = function () {
+      modal.style.display = "block";
+      inputField.focus(); // Set focus on the input field
+    }
 
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
+    span.onclick = function () {
       modal.style.display = "none";
     }
-  }
-</script>
-<script>
-  jQuery(document).ready(function($) {
-    $('#live-search').on('keyup', function() {
-      const input = $(this).val().trim();
-      const resultsBox = $('#search-results');
 
-      if (input.length < 2) {
-        resultsBox.empty();
-        return;
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
       }
+    }
+  </script>
+  <script>
+    jQuery(document).ready(function ($) {
+      $('#live-search').on('keyup', function () {
+        const input = $(this).val().trim();
+        const resultsBox = $('#search-results');
 
-      $.ajax({
-        url: liveSearch.ajax_url,
-        method: 'POST',
-        data: {
-          action: 'live_search',
-          keyword: input
-        },
-        success: function(response) {
+        if (input.length < 2) {
           resultsBox.empty();
-          if (response.success && response.data.length) {
-            // Create full-word OR regex for all keywords
-            const keywords = input.split(/\s+/).filter(k => k.length > 0);
-            const keywordRegex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'gi');
+          return;
+        }
 
-            response.data.forEach(item => {
-              const highlightedTitle = item.title.replace(keywordRegex, '<span class="highlight">$1</span>');
-              const highlightedExcerpt = item.excerpt.replace(keywordRegex, '<span class="highlight">$1</span>');
+        $.ajax({
+          url: liveSearch.ajax_url,
+          method: 'POST',
+          data: {
+            action: 'live_search',
+            keyword: input
+          },
+          success: function (response) {
+            resultsBox.empty();
+            if (response.success && response.data.length) {
+              // Create full-word OR regex for all keywords
+              const keywords = input.split(/\s+/).filter(k => k.length > 0);
+              const keywordRegex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'gi');
 
-              resultsBox.append(`
+              response.data.forEach(item => {
+                const highlightedTitle = item.title.replace(keywordRegex, '<span class="highlight">$1</span>');
+                const highlightedExcerpt = item.excerpt.replace(keywordRegex, '<span class="highlight">$1</span>');
+
+                resultsBox.append(`
               <div class="search-result-item">
                 <a href="${item.link}">
                   ${item.thumbnail ? `<img src="${item.thumbnail}" alt="" width="40" style="margin-right:10px;"/>` : ''}
@@ -137,1196 +167,1258 @@
                 </a>
               </div>
             `);
-            });
-          } else {
-            resultsBox.append('<div>No results found</div>');
+              });
+            } else {
+              resultsBox.append('<div>No results found</div>');
+            }
           }
-        }
+        });
       });
     });
-  });
-</script>
-<script>
-      document
-        .getElementById("close-btn")
-        .addEventListener("click", function () {
-          const banner = document.getElementById("ad-banner");
-          banner.style.opacity = "0";
-          banner.style.height = "0px";
-          setTimeout(function () {
-            banner.style.display = "none";
-          }, 500);
-        });
-    </script>
-<script>
-  // Dropdown menu functionality
-  jQuery(document).ready(function($) {
-    // Add dropdown indicator for menu items with children
-    $('.hr-main-navigation .menu-item-has-children > .menu-label').append('<span class="dropdown-icon"><ion-icon name="chevron-down-outline"></ion-icon></span>');
-    
-    // Mobile: toggle dropdown on click for span labels
-    $('.hr-main-navigation .menu-item-has-children > .menu-label').on('click', function(e) {
-      if ($(window).width() <= 768) {
-        $(this).parent().toggleClass('dropdown-active');
-        $(this).next('.sub-menu').stop(true, true).slideToggle(300);
+  </script>
+  <script>
+    document
+      .getElementById("close-btn")
+      .addEventListener("click", function () {
+        const banner = document.getElementById("ad-banner");
+        banner.style.opacity = "0";
+        banner.style.height = "0px";
+        setTimeout(function () {
+          banner.style.display = "none";
+        }, 500);
+      });
+  </script>
+  <script>
+    // Dropdown menu functionality
+    jQuery(document).ready(function ($) {
+      // Add dropdown indicator for menu items with children
+      $('.hr-main-navigation .menu-item-has-children > .menu-label').append('<span class="dropdown-icon"><ion-icon name="chevron-down-outline"></ion-icon></span>');
+
+      // Mobile: toggle dropdown on click for span labels
+      $('.hr-main-navigation .menu-item-has-children > .menu-label').on('click', function (e) {
+        if ($(window).width() <= 768) {
+          $(this).parent().toggleClass('dropdown-active');
+          $(this).next('.sub-menu').stop(true, true).slideToggle(300);
+        }
+      });
+
+      // Desktop dropdown on hover
+      if ($(window).width() > 768) {
+        $('.hr-main-navigation .menu-item-has-children').hover(
+          function () {
+            $(this).addClass('dropdown-active');
+            $(this).children('.sub-menu').stop(true, true).fadeIn(200);
+          },
+          function () {
+            $(this).removeClass('dropdown-active');
+            $(this).children('.sub-menu').stop(true, true).fadeOut(200);
+          }
+        );
       }
     });
-    
-    // Desktop dropdown on hover
-    if ($(window).width() > 768) {
-      $('.hr-main-navigation .menu-item-has-children').hover(
-        function() {
-          $(this).addClass('dropdown-active');
-          $(this).children('.sub-menu').stop(true, true).fadeIn(200);
-        },
-        function() {
-          $(this).removeClass('dropdown-active');
-          $(this).children('.sub-menu').stop(true, true).fadeOut(200);
-        }
-      );
+  </script>
+  <style>
+    /* Dropdown Menu Styles */
+    .hr-main-navigation {
+      position: relative;
     }
-  });
-</script>
-<style>
-/* Dropdown Menu Styles */
-.hr-main-navigation {
-  position: relative;
-}
 
-.hr-main-navigation .menu-item-has-children {
-  position: relative;
-}
+    .hr-main-navigation .menu-item-has-children {
+      position: relative;
+    }
 
-.hr-main-navigation .menu-item-has-children > .menu-label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  cursor: default;
-  color: hsl(0, 0%, 11%);
-  font-weight: 600;
-}
+    .hr-main-navigation .menu-item-has-children>.menu-label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: default;
+      color: hsl(0, 0%, 11%);
+      font-weight: 600;
+    }
 
-.hr-main-navigation .menu-item-has-children > .menu-label:hover {
-  opacity: 0.8;
-}
+    .hr-main-navigation .menu-item-has-children>.menu-label:hover {
+      opacity: 0.8;
+    }
 
-.hr-main-navigation .dropdown-icon {
-  display: inline-flex;
-  align-items: center;
-  font-size: 16px;
-  transition: transform 0.3s ease;
-}
+    .hr-main-navigation .dropdown-icon {
+      display: inline-flex;
+      align-items: center;
+      font-size: 16px;
+      transition: transform 0.3s ease;
+    }
 
-.hr-main-navigation .dropdown-active > .menu-label .dropdown-icon {
-  transform: rotate(180deg);
-}
+    .hr-main-navigation .dropdown-active>.menu-label .dropdown-icon {
+      transform: rotate(180deg);
+    }
 
-.hr-main-navigation .sub-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  min-width: 220px;
-  padding: 10px 0;
-  z-index: 1000;
-  list-style: none;
-  margin: 0;
-}
+    .hr-main-navigation .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      min-width: 220px;
+      padding: 10px 0;
+      z-index: 1000;
+      list-style: none;
+      margin: 0;
+    }
 
-.hr-main-navigation .sub-menu li {
-  margin: 0;
-  padding: 0;
-}
+    .hr-main-navigation .sub-menu li {
+      margin: 0;
+      padding: 0;
+    }
 
-.hr-main-navigation .sub-menu li a {
-  display: block;
-  padding: 12px 20px;
-  color: #333;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  font-size: 14px;
-}
+    .hr-main-navigation .sub-menu li a {
+      display: block;
+      padding: 12px 20px;
+      color: #333;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-size: 14px;
+    }
 
-.hr-main-navigation .sub-menu li a:hover {
-  background-color: #f5f5f5;
-  color: #e54f38;
-  padding-left: 25px;
-}
+    .hr-main-navigation .sub-menu li a:hover {
+      background-color: #f5f5f5;
+      color: #e54f38;
+      padding-left: 25px;
+    }
 
-/* Mobile Dropdown Styles */
-@media (max-width: 768px) {
-  .hr-main-navigation .sub-menu {
-    position: static;
-    box-shadow: none;
-    background: #f9f9f9;
-    border-radius: 0;
-    margin-left: 15px;
-    margin-top: 5px;
-  }
-  
-  .hr-main-navigation .sub-menu li a {
-    padding: 10px 15px;
-  }
-  
-  .hr-main-navigation .sub-menu li a:hover {
-    padding-left: 20px;
-  }
-}
-</style>
-<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
-<main>
-<div class="hr-container">
-<section class="diverse-hero-section">
-<h1 class="diverse-hero-title">The Future of HR Cloud Management is <span class="hrl-hero__highlight">Diverse.</span></h1>
-<p class="diverse-hero-lead">
-                Diverse HRMS offers all the features you would expect from your favorite Open Source HR Software and
-                much more.
-            </p>
-<div class="diverse-hero-actions">
-<a class="hrl-primary-button hrl-btn" href="https://cloud.diverse.com/user/login">
-<span><ion-icon name="rocket-sharp"></ion-icon>Start Free</span>
-</a>
-<a class="hrl-secondary-button hrl-btn" href="https://github.com/diverse-opensource/diverse/">
-<span><ion-icon name="logo-github"></ion-icon>View on Github</span>
-</a>
-</div>
-<!-- <div class="hrl-heo__actions">
+    /* Mobile Dropdown Styles */
+    @media (max-width: 768px) {
+      .hr-main-navigation .sub-menu {
+        position: static;
+        box-shadow: none;
+        background: #f9f9f9;
+        border-radius: 0;
+        margin-left: 15px;
+        margin-top: 5px;
+      }
+
+      .hr-main-navigation .sub-menu li a {
+        padding: 10px 15px;
+      }
+
+      .hr-main-navigation .sub-menu li a:hover {
+        padding-left: 20px;
+      }
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <main>
+    <div class="hr-container">
+      <section class="diverse-hero-section">
+        <h1 class="diverse-hero-title">The Future of HR Cloud Management is Diverse.</h1>
+        <p class="diverse-hero-lead">
+          Diverse HRMS offers all the features you would expect from your favorite Open Source HR Software and
+          much more.
+        </p>
+        <div class="diverse-hero-actions">
+          <a class="hrl-primary-button hrl-btn" href="https://cloud.diverse.com/user/login">
+            <span><ion-icon name="rocket-sharp"></ion-icon>Start Free</span>
+          </a>
+          <a class="hrl-secondary-button hrl-btn" href="https://github.com/diverse-opensource/diverse/">
+            <span><ion-icon name="logo-github"></ion-icon>View on Github</span>
+          </a>
+        </div>
+        <!-- <div class="hrl-heo__actions">
                 <button class="hrl-primary-button1 hrl-btn active" data-target="hrm-group">Diverse HRM</button>
                 <button class="hrl-primary-button1 hrl-btn" data-target="crm-group">Diverse CRM</button>
             </div> -->
-</section>
-</div>
-<!-- <div class="hrl-toggle-wrapper"> -->
-<!-- HRM Section -->
-<section class="hrl hrl-toggle-section" id="hrm-1">
-<div class="hr-container">
-</div>
-</section>
-<section class="hrl-home-stand-out hrl-toggle-section" id="hrm-2">
-<div class="hr-container">
-<img alt="Product Image" class="hrl-hero__lead-image-3" height="614" src="wp-content/themes/diverse-wp-theme-main/assets/images/design/pattern-diverse.svg" width="989"/>
-<h3>What makes Diverse HRM Standout</h3>
-<ul class="hr-feature-items">
-<li class="hr-feature-item">
-<div class="hr-feature-item__icon-container hrl-feature-item__icon-container--pos-1">
-<img alt="Free of cost" class="hr-feature-item__icon" height="145" src="wp-content/themes/diverse-wp-theme-main/assets/images/illustrations/free-of-cost.svg" width="151"/>
-</div>
-<div class="hr-feature-item__details">
-<h4 class="hrl-feature-item__title">Free of Cost</h4>
-<p class="hrl-feature-item__content">
-              Diverse is the only comprehensive HR software solution that's absolutely free.
-            </p>
-</div>
-</li>
-<li class="hr-feature-item">
-<div class="hr-feature-item__icon-container hrl-feature-item__icon-container--pos-2">
-<img alt="Open-source" class="hr-feature-item__icon" height="156" src="wp-content/themes/diverse-wp-theme-main/assets/images/illustrations/open-source.svg" width="218"/>
-</div>
-<div class="hr-feature-item__details">
-<h4 class="hrl-feature-item__title">Open-source</h4>
-<p class="hrl-feature-item__content">
-              Diverse is open-source. You get to call shots. Use it however you see fit.
-            </p>
-</div>
-</li>
-<li class="hr-feature-item">
-<div class="hr-feature-item__icon-container hrl-feature-item__icon-container--pos-3">
-<img alt="Host Yourself" class="hr-feature-item__icon" height="135" src="wp-content/themes/diverse-wp-theme-main/assets/images/illustrations/host-yourself.svg" width="80"/>
-</div>
-<div class="hr-feature-item__details">
-<h4 class="hrl-feature-item__title">Host Yourself</h4>
-<p class="hrl-feature-item__content">
-              Diverse is yours, forever. Host it wherever you like — local or live server.
-            </p>
-</div>
-</li>
-</ul>
-</div>
-</section>
-<section class="hr-container hrl-toggle-section" id="hrm-3">
-<div class="hrl-owl-carousel-container">
-<h4 class="hrl-owl-carousel-header">All the modules you'll ever need in one software.</h4>
-<div class="hrl-owl-carousel owl-carousel">
-<div class="hrl-owl-item">
-<div class="diverse-glass-panel panel-variant-0">
-<div class="diverse-panel-content">
-<div class="hrl-docs-module-label"><span><a href="/docs/attendance/">Attendance</a></span>
-</div>
-<ul class="diverse-feature-cards">
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Efficient Attendance Management
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Streamline employee attendance with Diverse HR's automated check-in/out feature,
-                                        eliminating manual tracking effortlessly.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Biometric Integration </h3>
-<p class="diverse-card-desc">
-                                        Diverse Open Source HRMS ensures precise attendance tracking with seamless
-                                        biometric device integration for effortless workforce management.</p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Overtime Calculation
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse Open Source Attendance Software accurately calculates overtime hours,
-                                        ensuring proper compensation and labor law compliance.</p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Late-Come and Early-Out Tracking
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse tracks late arrivals and early departures via check-in/out, addressing
-                                        attendance issues to promote punctuality.
-                                    </p>
-</li>
-</ul>
-<a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block" href="/docs/attendance/">Explore
-                                More</a>
-</div>
-<div class="diverse-panel-media">
-<div class="hrl-modules__screenshot-div">
-<img alt="A screenshot of the attendance module" class="diverse-media-img" height="829" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-attendance-screenshot.webp" width="1439"/>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-owl-item">
-<div class="diverse-glass-panel panel-variant-1">
-<div class="diverse-panel-content">
-<div class="hrl-docs-module-label"><span><a href="/docs/recruitment/">Recruitment</a></span>
-</div>
-<ul class="diverse-feature-cards">
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Manage Recruitment Easily
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Simplify recruitment with Diverse's open-source HRMS, offering an intuitive UI
-                                        for seamless candidate management.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Identify Potential Candidates
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Effortlessly find and evaluate candidates with smart insights on strengths and
-                                        weaknesses at a glance.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Manage Recruitment Flow
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Design and control your recruitment process, manage candidates, and seamlessly
-                                        transition between stages with prioritization.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Candidate Self Tracking
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse HRMS offers real-time, transparent application tracking for candidates
-                                        through an intuitive interface.
-                                    </p>
-</li>
-</ul>
-<a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block" href="/docs/recruitment/">Explore
-                                More</a>
-</div>
-<div class="diverse-panel-media">
-<div class="hrl-modules__screenshot-div">
-<img alt="A screenshot of the recruitment module" class="diverse-media-img" height="829" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-recruitment-screenshot.webp" width="1439"/>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-owl-item">
-<div class="diverse-glass-panel panel-variant-0">
-<div class="diverse-panel-content">
-<div class="hrl-docs-module-label"><span><a href="/docs/onboarding/">Onboarding</a></span>
-</div>
-<ul class="diverse-feature-cards">
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Seamless Integration and Familiarization
-                                    </h3>
-<p class="diverse-card-desc">
-                                        This integration and familiarization process sets a positive tone for the new
-                                        employee's experience and contributes to their retention and productivity.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Preparation for a Successful Start
-                                    </h3>
-<p class="diverse-card-desc">
-                                        By preparing new employees in advance, they feel welcomed, informed, and ready
-                                        to hit the ground running on their first day.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Enhancing engagement, productivity, and retention.
-                                    </h3>
-<p class="diverse-card-desc">
-                                        An effective onboarding experience enhances retention rates, as new employees
-                                        feel supported and valued by the organization.
-                                    </p>
-</li>
-</ul>
-<a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block" href="/docs/onboarding/">Explore
-                                More</a>
-</div>
-<div class="diverse-panel-media">
-<div class="hrl-modules__screenshot-div">
-<img alt="A screenshot of the onboarding module" class="diverse-media-img" height="829" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-onboarding-screenshot.webp" width="1439"/>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-owl-item">
-<div class="diverse-glass-panel panel-variant-1">
-<div class="diverse-panel-content">
-<div class="hrl-docs-module-label"><span><a href="/docs/leave/">Leave</a></span></div>
-<ul class="diverse-feature-cards">
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Streamlined and Efficient Leave Management
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse's open-source leave management software simplifies employee leave
-                                        applications, eliminating manual paperwork.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Leave Planning and Operational Continuity
-                                    </h3>
-<p class="diverse-card-desc">
-                                        The system allows managers to proactively manage leave patterns, identify
-                                        trends, and take necessary measures to minimize absenteeism. </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Enhanced Accuracy and Compliance
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse HRMS manages leave balances, tracks accruals, enforces policies, and
-                                        processes allocation requests efficiently.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Flexible Approval Workflows
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse HRMS simplifies approvals with customizable rules for leave duration,
-                                        projects, and additional layers.
-                                    </p>
-</li>
-</ul>
-<a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block" href="/docs/leave/">Explore
-                                More</a>
-</div>
-<div class="diverse-panel-media">
-<div class="hrl-modules__screenshot-div">
-<img alt="A screenshot of the leave module" class="diverse-media-img" height="829" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-leave-screenshot.webp" width="1439"/>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-owl-item">
-<div class="diverse-glass-panel panel-variant-0">
-<div class="diverse-panel-content">
-<div class="hrl-docs-module-label"><span><a href="/docs/assets/">Assets</a></span></div>
-<ul class="diverse-feature-cards">
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Streamlined Asset Tracking and Accountability
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Asset management software systems can track the location, status, and usage of
-                                        assets, including asset requests and allocations.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Optimized Maintenance and Reliability
-                                    </h3>
-<p class="diverse-card-desc">
-                                        The system automates maintenance scheduling and predictive alerts to prevent
-                                        breakdowns, minimize downtime, and extend lifespan. </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Improved Compliance and Risk Management
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse ensures compliance by maintaining audit trails and using risk management
-                                        tools for proactive mitigation.
-                                    </p>
-</li></ul>
-<a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block" href="/docs/assets/">Explore
-                                More</a>
-</div>
-<div class="diverse-panel-media">
-<div class="hrl-modules__screenshot-div">
-<img alt="A screenshot of the assets module" class="diverse-media-img" height="829" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-assets-screenshot.webp" width="1439"/>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-owl-item">
-<div class="diverse-glass-panel panel-variant-1">
-<div class="diverse-panel-content">
-<div class="hrl-docs-module-label"><span><a href="/docs/employee/">Employee</a></span></div>
-<ul class="diverse-feature-cards">
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Employee Directory and Information Management
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse HR Software centralizes employee management with LDAP integration for
-                                        seamless data syncing and efficient organization.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Personal Information Management
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse HRMS an open-source software, securely manages employee data, ensuring
-                                        accurate, accessible information for HR professionals and managers.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Work Information Tracking
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse HR Software effectively tracks employee details like roles, departments,
-                                        hierarchies, and statuses for streamlined workforce management.
-                                    </p>
-</li>
-</ul>
-<a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block" href="/docs/employee/">Explore
-                                More</a>
-</div>
-<div class="diverse-panel-media">
-<div class="hrl-modules__screenshot-div">
-<img alt="A screenshot of the employee module" class="diverse-media-img" height="829" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-employee-screenshot.webp" width="1439"/>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-owl-item">
-<div class="diverse-glass-panel panel-variant-0">
-<div class="diverse-panel-content">
-<div class="hrl-docs-module-label"><span><a href="/docs/pms/">PMS</a></span></div>
-<ul class="diverse-feature-cards">
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Enhanced Clarity and OKR Alignment
-                                    </h3>
-<p class="diverse-card-desc">
-                                        OKRs provide clear direction and goals for employees.
-                                    </p>
-<p class="hrl-home-modules__desc">
-                                        Helps employees understand how their work aligns with company goals.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        360° Performance Insights
-                                    </h3>
-<p class="diverse-card-desc">
-                                        360 feedback gathers feedback from multiple sources.
-                                    </p>
-<p class="hrl-home-modules__desc">
-                                        Provides a comprehensive view of employee performance.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Continuous Improvement via Feedback
-                                    </h3>
-<p class="diverse-card-desc">
-                                        OKRs and 360 feedback can be used on a regular basis.
-                                    </p>
-<p class="hrl-home-modules__desc">
-                                        Provides ongoing feedback to employees.
-                                    </p>
-</li>
-</ul>
-<a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block" href="/docs/pms/">Explore
-                                More</a>
-</div>
-<div class="diverse-panel-media">
-<div class="hrl-modules__screenshot-div">
-<img alt="A screenshot of the PMS module" class="diverse-media-img" height="829" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-pms-screenshot.webp" width="1439"/>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-owl-item">
-<div class="diverse-glass-panel panel-variant-1">
-<div class="diverse-panel-content">
-<div class="hrl-docs-module-label"><span><a href="/docs/payroll/">Payroll</a></span></div>
-<ul class="diverse-feature-cards">
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Manage Cotracts &amp; Agreements
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse's Payroll Software streamlines contract management, enabling customized
-                                        employment agreements, compensation, and work arrangements effortlessly.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Manage Allowances with Ease
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse HRMS simplifies allowance management with customizable options,
-                                        eligibility criteria, and allocation controls for fair compensation.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Simplify Deduction Management
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse HRMS streamlines deduction management, offering customization,
-                                        eligibility settings, and targeted allocation, ensuring fair compensation
-                                        practices.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Effortless Federal Tax Management </h3>
-<p class="diverse-card-desc">
-                                        Diverse HR software enables customizable tax calculations for accurate
-                                        withholdings and seamless payroll processing.
-                                    </p>
-</li>
-</ul>
-<a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block" href="/docs/payroll/">Explore
-                                More</a>
-</div>
-<div class="diverse-panel-media">
-<div class="hrl-modules__screenshot-div">
-<img alt="A screenshot of the attendance module" class="diverse-media-img" height="829" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-payroll-screenshot.webp" width="1439"/>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-owl-item">
-<div class="diverse-glass-panel panel-variant-0">
-<div class="diverse-panel-content">
-<div class="hrl-docs-module-label"><span><a href="/docs/offboarding/">Offboarding</a></span>
-</div>
-<ul class="diverse-feature-cards">
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Streamlined Resignation Handling
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse HRMS simplifies resignation submission and management with an intuitive
-                                        interface, enabling efficient tracking and processing of employee exits.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Customized Workflows
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Design customizable offboarding workflows for resignations, retirements, and
-                                        terminations to manage diverse employee exits efficiently.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Flexible Offboarding Features </h3>
-<p class="diverse-card-desc">
-                                        Diverse HRMS enables customizable offboarding tasks tailored to organizational
-                                        and individual needs.
-                                    </p>
-</li>
-</ul>
-<a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block" href="/docs/offboarding/">Explore
-                                More</a>
-</div>
-<div class="diverse-panel-media">
-<div class="hrl-modules__screenshot-div">
-<img alt="A screenshot of the offboarding module" class="diverse-media-img" height="829" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-offboarding-screenshot.webp" width="1439"/>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-owl-item">
-<div class="diverse-glass-panel panel-variant-1">
-<div class="diverse-panel-content">
-<div class="hrl-docs-module-label"><span><a href="/docs/help-desk/">Help Desk</a></span>
-</div>
-<ul class="diverse-feature-cards">
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Centralized Frequently Asked Questions
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Diverse Help Desk centralizes FAQs, enabling quick solutions, reducing
-                                        repetitive inquiries, and boosting self-service efficiency.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Efficient Ticket Handling
-                                    </h3>
-<p class="diverse-card-desc">
-                                        The system offers robust ticket management with automated workflows,
-                                        multi-channel creation, and real-time updates for efficient support resolution.
-                                    </p>
-</li>
-<li class="diverse-card">
-<h3 class="diverse-card-title">
-                                        Prioritization and Escalation
-                                    </h3>
-<p class="diverse-card-desc">
-                                        Tickets are prioritized by urgency and impact, ensuring critical issues are
-                                        swiftly escalated and resolved efficiently.
-                                    </p>
-</li>
-</ul>
-<a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block" href="/docs/help-desk/">Explore
-                                More</a>
-</div>
-<div class="diverse-panel-media">
-<div class="hrl-modules__screenshot-div">
-<img alt="A screenshot of the help desk module" class="diverse-media-img" height="829" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-helpdesk-screenshot.webp" width="1439"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-owl-carousel-count"></div>
-<div class="hrl-owl-carousel-progress">
-<div class="hrl-owl-carousel-progress-bar"></div>
-</div>
-<div class="hrl-owl-carousel-navigation">
-<button aria-label="Go to previous slide" class="hrl-owl-carousel-prev hrl-nav-button">
-<ion-icon name="chevron-back-outline"></ion-icon>
-</button>
-<button aria-label="Go to next slide" class="hrl-owl-carousel-next hrl-nav-button">
-<ion-icon name="chevron-forward-outline"></ion-icon>
-</button>
-</div>
-</div>
-</section>
-<!-- Testimonials section -->
-<section class="hr-container py-4">
-<h3 class="hrl-faq-title my-2">Words From Our Clients</h3>
-<p class="hrl-hero__lead">
-    The proof of our performance lies in the people who use Diverse every day.
-    Real stories from real users who’ve transformed their journey.
-  </p>
-<!-- FIXED BUBBLE CONTAINER -->
-<!-- <div class="testimonial-card hrl-home-app-container"> -->
-<div class="diverse-glass-testimonial">
-<!-- Quote icon stays fixed -->
-<img alt="Quote Icon" class="quote-icon" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-crm/icon.svg"/>
-<!-- SWIPER (only contents slide) -->
-<div class="swiper mySwiper">
-<div class="swiper-wrapper">
-<!-- ONLY CONTENT SLIDES -->
-<div class="swiper-slide">
-<div class="testimonial-header">
-<div class="t-img">
-<img alt="Fashion Bazar" src="wp-content/uploads/2025/11/user.png"/>
-</div>
-<div>
-<h4 class="t-name">Fashion Bazar</h4>
-<p class="t-role">Junaid-IT Manager-India</p>
-<div class="t-stars">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-</div>
-</div>
-</div>
-<p class="t-text" data-full="We recently switched to Diverse HRMS and couldn't be happier! After using a multinational brand's HRMS, we found their pricing to be a bit steep. Diverse's tailored solution has been a perfect fit, covering all our HR needs with 100% satisfaction. We highly recommend Diverse for their customized approach and excellent service. A great alternative for businesses seeking a cost-effective, feature-rich HRMS !" data-short="We recently switched to Diverse HRMS and couldn't be happier! After using a multinational brand's HRMS, we found their pricing…">
-   We recently switched to Diverse HRMS and couldn't be happier! After using a multinational brand's HRMS, we found their pricing…</p>
-<button class="read-more-btn">Read More</button>
-</div><!-- /swiper-slide -->
-<!-- ONLY CONTENT SLIDES -->
-<div class="swiper-slide">
-<div class="testimonial-header">
-<div class="t-img">
-<img alt="Hajgulf" src="wp-content/uploads/2025/11/user.png"/>
-</div>
-<div>
-<h4 class="t-name">Hajgulf</h4>
-<p class="t-role">Sreehari-IT Manager-Bahrain</p>
-<div class="t-stars">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-</div>
-</div>
-</div>
-<p class="t-text" data-full="I’ve been using Diverse and it’s made my work so much easier. It’s user-friendly, efficient, and has really improved how I get things done. Highly recommend it !" data-short="I’ve been using Diverse and it’s made my work so much easier. It’s user-friendly, efficient, and has really improved how…">
-   I’ve been using Diverse and it’s made my work so much easier. It’s user-friendly, efficient, and has really improved how…</p>
-<button class="read-more-btn">Read More</button>
-</div><!-- /swiper-slide -->
-<!-- ONLY CONTENT SLIDES -->
-<div class="swiper-slide">
-<div class="testimonial-header">
-<div class="t-img">
-<img alt="MG Steel Industries Pvt Ltd" src="wp-content/uploads/2025/11/user.png"/>
-</div>
-<div>
-<h4 class="t-name">MG Steel Industries Pvt Ltd</h4>
-<p class="t-role">Paras jain - MD-Nepal</p>
-<div class="t-stars">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-</div>
-</div>
-</div>
-<p class="t-text" data-full="My experience with Horrila team was much better than I had expected. Though my work had not been completed due to some technical issues...and also due to my timings issue, support I got throughout this time was exceptional..No if no but, they just did what was best possible." data-short="My experience with Horrila team was much better than I had expected. Though my work had not been completed due…">
-   My experience with Horrila team was much better than I had expected. Though my work had not been completed due…</p>
-<button class="read-more-btn">Read More</button>
-</div><!-- /swiper-slide -->
-<!-- ONLY CONTENT SLIDES -->
-<div class="swiper-slide">
-<div class="testimonial-header">
-<div class="t-img">
-<img alt="Just Simply Marketing" src="wp-content/uploads/2025/11/user.png"/>
-</div>
-<div>
-<h4 class="t-name">Just Simply Marketing</h4>
-<p class="t-role">Lianna-Operations Consultant- Malaysia</p>
-<div class="t-stars">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-</div>
-</div>
-</div>
-<p class="t-text" data-full="Diverse provided a free and efficient software for our HR needs with our start-up. It’s a great alternative to expensive software that adds up. Diverse’s ability to provide a demo is the cherry on top!" data-short="Diverse provided a free and efficient software for our HR needs with our start-up. It’s a great alternative to expensive…">
-   Diverse provided a free and efficient software for our HR needs with our start-up. It’s a great alternative to expensive…</p>
-<button class="read-more-btn">Read More</button>
-</div><!-- /swiper-slide -->
-<!-- ONLY CONTENT SLIDES -->
-<div class="swiper-slide">
-<div class="testimonial-header">
-<div class="t-img">
-<img alt="Betasaurus" src="wp-content/uploads/2025/11/user.png"/>
-</div>
-<div>
-<h4 class="t-name">Betasaurus</h4>
-<p class="t-role">Mohith - Founder of Betasaurus-India</p>
-<div class="t-stars">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-</div>
-</div>
-</div>
-<p class="t-text" data-full="Diverse is good, above expectations. Received good installation support also.
+      </section>
+    </div>
+    <!-- <div class="hrl-toggle-wrapper"> -->
+    <!-- HRM Section -->
+    <section class="hrl hrl-toggle-section" id="hrm-1">
+      <div class="hr-container">
+      </div>
+    </section>
+    <section class="hrl-home-stand-out hrl-toggle-section" id="hrm-2">
+      <div class="hr-container">
+        <img alt="Product Image" class="hrl-hero__lead-image-3" height="614"
+          src="wp-content/themes/diverse-wp-theme-main/assets/images/design/pattern-diverse.svg" width="989" />
+        <h3>What makes Diverse HRM Standout</h3>
+        <ul class="hr-feature-items">
+          <li class="hr-feature-item">
+            <div class="hr-feature-item__icon-container hrl-feature-item__icon-container--pos-1">
+              <img alt="Free of cost" class="hr-feature-item__icon" height="145"
+                src="wp-content/themes/diverse-wp-theme-main/assets/images/illustrations/free-of-cost.svg"
+                width="151" />
+            </div>
+            <div class="hr-feature-item__details">
+              <h4 class="hrl-feature-item__title">Free of Cost</h4>
+              <p class="hrl-feature-item__content">
+                Diverse is the only comprehensive HR software solution that's absolutely free.
+              </p>
+            </div>
+          </li>
+          <li class="hr-feature-item">
+            <div class="hr-feature-item__icon-container hrl-feature-item__icon-container--pos-2">
+              <img alt="Open-source" class="hr-feature-item__icon" height="156"
+                src="wp-content/themes/diverse-wp-theme-main/assets/images/illustrations/open-source.svg" width="218" />
+            </div>
+            <div class="hr-feature-item__details">
+              <h4 class="hrl-feature-item__title">Open-source</h4>
+              <p class="hrl-feature-item__content">
+                Diverse is open-source. You get to call shots. Use it however you see fit.
+              </p>
+            </div>
+          </li>
+          <li class="hr-feature-item">
+            <div class="hr-feature-item__icon-container hrl-feature-item__icon-container--pos-3">
+              <img alt="Host Yourself" class="hr-feature-item__icon" height="135"
+                src="wp-content/themes/diverse-wp-theme-main/assets/images/illustrations/host-yourself.svg"
+                width="80" />
+            </div>
+            <div class="hr-feature-item__details">
+              <h4 class="hrl-feature-item__title">Host Yourself</h4>
+              <p class="hrl-feature-item__content">
+                Diverse is yours, forever. Host it wherever you like — local or live server.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="hr-container hrl-toggle-section" id="hrm-3">
+      <div class="hrl-owl-carousel-container">
+        <h4 class="hrl-owl-carousel-header">All the modules you'll ever need in one software.</h4>
+        <div class="hrl-owl-carousel owl-carousel">
+          <div class="hrl-owl-item">
+            <div class="diverse-glass-panel panel-variant-0">
+              <div class="diverse-panel-content">
+                <div class="hrl-docs-module-label"><span><a href="/docs/attendance/">Attendance</a></span>
+                </div>
+                <ul class="diverse-feature-cards">
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Efficient Attendance Management
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Streamline employee attendance with Diverse HR's automated check-in/out feature,
+                      eliminating manual tracking effortlessly.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Biometric Integration </h3>
+                    <p class="diverse-card-desc">
+                      Diverse Open Source HRMS ensures precise attendance tracking with seamless
+                      biometric device integration for effortless workforce management.</p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Overtime Calculation
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse Open Source Attendance Software accurately calculates overtime hours,
+                      ensuring proper compensation and labor law compliance.</p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Late-Come and Early-Out Tracking
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse tracks late arrivals and early departures via check-in/out, addressing
+                      attendance issues to promote punctuality.
+                    </p>
+                  </li>
+                </ul>
+                <a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block"
+                  href="/docs/attendance/">Explore
+                  More</a>
+              </div>
+              <div class="diverse-panel-media">
+                <div class="hrl-modules__screenshot-div">
+                  <img alt="A screenshot of the attendance module" class="diverse-media-img" height="829"
+                    src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-attendance-screenshot.webp"
+                    width="1439" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hrl-owl-item">
+            <div class="diverse-glass-panel panel-variant-1">
+              <div class="diverse-panel-content">
+                <div class="hrl-docs-module-label"><span><a href="/docs/recruitment/">Recruitment</a></span>
+                </div>
+                <ul class="diverse-feature-cards">
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Manage Recruitment Easily
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Simplify recruitment with Diverse's open-source HRMS, offering an intuitive UI
+                      for seamless candidate management.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Identify Potential Candidates
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Effortlessly find and evaluate candidates with smart insights on strengths and
+                      weaknesses at a glance.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Manage Recruitment Flow
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Design and control your recruitment process, manage candidates, and seamlessly
+                      transition between stages with prioritization.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Candidate Self Tracking
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HRMS offers real-time, transparent application tracking for candidates
+                      through an intuitive interface.
+                    </p>
+                  </li>
+                </ul>
+                <a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block"
+                  href="/docs/recruitment/">Explore
+                  More</a>
+              </div>
+              <div class="diverse-panel-media">
+                <div class="hrl-modules__screenshot-div">
+                  <img alt="A screenshot of the recruitment module" class="diverse-media-img" height="829"
+                    src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-recruitment-screenshot.webp"
+                    width="1439" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hrl-owl-item">
+            <div class="diverse-glass-panel panel-variant-0">
+              <div class="diverse-panel-content">
+                <div class="hrl-docs-module-label"><span><a href="/docs/onboarding/">Onboarding</a></span>
+                </div>
+                <ul class="diverse-feature-cards">
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Seamless Integration and Familiarization
+                    </h3>
+                    <p class="diverse-card-desc">
+                      This integration and familiarization process sets a positive tone for the new
+                      employee's experience and contributes to their retention and productivity.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Preparation for a Successful Start
+                    </h3>
+                    <p class="diverse-card-desc">
+                      By preparing new employees in advance, they feel welcomed, informed, and ready
+                      to hit the ground running on their first day.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Enhancing engagement, productivity, and retention.
+                    </h3>
+                    <p class="diverse-card-desc">
+                      An effective onboarding experience enhances retention rates, as new employees
+                      feel supported and valued by the organization.
+                    </p>
+                  </li>
+                </ul>
+                <a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block"
+                  href="/docs/onboarding/">Explore
+                  More</a>
+              </div>
+              <div class="diverse-panel-media">
+                <div class="hrl-modules__screenshot-div">
+                  <img alt="A screenshot of the onboarding module" class="diverse-media-img" height="829"
+                    src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-onboarding-screenshot.webp"
+                    width="1439" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hrl-owl-item">
+            <div class="diverse-glass-panel panel-variant-1">
+              <div class="diverse-panel-content">
+                <div class="hrl-docs-module-label"><span><a href="/docs/leave/">Leave</a></span></div>
+                <ul class="diverse-feature-cards">
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Streamlined and Efficient Leave Management
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse's open-source leave management software simplifies employee leave
+                      applications, eliminating manual paperwork.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Leave Planning and Operational Continuity
+                    </h3>
+                    <p class="diverse-card-desc">
+                      The system allows managers to proactively manage leave patterns, identify
+                      trends, and take necessary measures to minimize absenteeism. </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Enhanced Accuracy and Compliance
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HRMS manages leave balances, tracks accruals, enforces policies, and
+                      processes allocation requests efficiently.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Flexible Approval Workflows
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HRMS simplifies approvals with customizable rules for leave duration,
+                      projects, and additional layers.
+                    </p>
+                  </li>
+                </ul>
+                <a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block"
+                  href="/docs/leave/">Explore
+                  More</a>
+              </div>
+              <div class="diverse-panel-media">
+                <div class="hrl-modules__screenshot-div">
+                  <img alt="A screenshot of the leave module" class="diverse-media-img" height="829"
+                    src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-leave-screenshot.webp"
+                    width="1439" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hrl-owl-item">
+            <div class="diverse-glass-panel panel-variant-0">
+              <div class="diverse-panel-content">
+                <div class="hrl-docs-module-label"><span><a href="/docs/assets/">Assets</a></span></div>
+                <ul class="diverse-feature-cards">
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Streamlined Asset Tracking and Accountability
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Asset management software systems can track the location, status, and usage of
+                      assets, including asset requests and allocations.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Optimized Maintenance and Reliability
+                    </h3>
+                    <p class="diverse-card-desc">
+                      The system automates maintenance scheduling and predictive alerts to prevent
+                      breakdowns, minimize downtime, and extend lifespan. </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Improved Compliance and Risk Management
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse ensures compliance by maintaining audit trails and using risk management
+                      tools for proactive mitigation.
+                    </p>
+                  </li>
+                </ul>
+                <a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block"
+                  href="/docs/assets/">Explore
+                  More</a>
+              </div>
+              <div class="diverse-panel-media">
+                <div class="hrl-modules__screenshot-div">
+                  <img alt="A screenshot of the assets module" class="diverse-media-img" height="829"
+                    src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-assets-screenshot.webp"
+                    width="1439" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hrl-owl-item">
+            <div class="diverse-glass-panel panel-variant-1">
+              <div class="diverse-panel-content">
+                <div class="hrl-docs-module-label"><span><a href="/docs/employee/">Employee</a></span></div>
+                <ul class="diverse-feature-cards">
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Employee Directory and Information Management
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HR Software centralizes employee management with LDAP integration for
+                      seamless data syncing and efficient organization.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Personal Information Management
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HRMS an open-source software, securely manages employee data, ensuring
+                      accurate, accessible information for HR professionals and managers.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Work Information Tracking
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HR Software effectively tracks employee details like roles, departments,
+                      hierarchies, and statuses for streamlined workforce management.
+                    </p>
+                  </li>
+                </ul>
+                <a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block"
+                  href="/docs/employee/">Explore
+                  More</a>
+              </div>
+              <div class="diverse-panel-media">
+                <div class="hrl-modules__screenshot-div">
+                  <img alt="A screenshot of the employee module" class="diverse-media-img" height="829"
+                    src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-employee-screenshot.webp"
+                    width="1439" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hrl-owl-item">
+            <div class="diverse-glass-panel panel-variant-0">
+              <div class="diverse-panel-content">
+                <div class="hrl-docs-module-label"><span><a href="/docs/pms/">PMS</a></span></div>
+                <ul class="diverse-feature-cards">
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Enhanced Clarity and OKR Alignment
+                    </h3>
+                    <p class="diverse-card-desc">
+                      OKRs provide clear direction and goals for employees.
+                    </p>
+                    <p class="hrl-home-modules__desc">
+                      Helps employees understand how their work aligns with company goals.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      360° Performance Insights
+                    </h3>
+                    <p class="diverse-card-desc">
+                      360 feedback gathers feedback from multiple sources.
+                    </p>
+                    <p class="hrl-home-modules__desc">
+                      Provides a comprehensive view of employee performance.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Continuous Improvement via Feedback
+                    </h3>
+                    <p class="diverse-card-desc">
+                      OKRs and 360 feedback can be used on a regular basis.
+                    </p>
+                    <p class="hrl-home-modules__desc">
+                      Provides ongoing feedback to employees.
+                    </p>
+                  </li>
+                </ul>
+                <a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block"
+                  href="/docs/pms/">Explore
+                  More</a>
+              </div>
+              <div class="diverse-panel-media">
+                <div class="hrl-modules__screenshot-div">
+                  <img alt="A screenshot of the PMS module" class="diverse-media-img" height="829"
+                    src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-pms-screenshot.webp"
+                    width="1439" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hrl-owl-item">
+            <div class="diverse-glass-panel panel-variant-1">
+              <div class="diverse-panel-content">
+                <div class="hrl-docs-module-label"><span><a href="/docs/payroll/">Payroll</a></span></div>
+                <ul class="diverse-feature-cards">
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Manage Cotracts &amp; Agreements
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse's Payroll Software streamlines contract management, enabling customized
+                      employment agreements, compensation, and work arrangements effortlessly.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Manage Allowances with Ease
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HRMS simplifies allowance management with customizable options,
+                      eligibility criteria, and allocation controls for fair compensation.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Simplify Deduction Management
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HRMS streamlines deduction management, offering customization,
+                      eligibility settings, and targeted allocation, ensuring fair compensation
+                      practices.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Effortless Federal Tax Management </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HR software enables customizable tax calculations for accurate
+                      withholdings and seamless payroll processing.
+                    </p>
+                  </li>
+                </ul>
+                <a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block"
+                  href="/docs/payroll/">Explore
+                  More</a>
+              </div>
+              <div class="diverse-panel-media">
+                <div class="hrl-modules__screenshot-div">
+                  <img alt="A screenshot of the attendance module" class="diverse-media-img" height="829"
+                    src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-payroll-screenshot.webp"
+                    width="1439" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hrl-owl-item">
+            <div class="diverse-glass-panel panel-variant-0">
+              <div class="diverse-panel-content">
+                <div class="hrl-docs-module-label"><span><a href="/docs/offboarding/">Offboarding</a></span>
+                </div>
+                <ul class="diverse-feature-cards">
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Streamlined Resignation Handling
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HRMS simplifies resignation submission and management with an intuitive
+                      interface, enabling efficient tracking and processing of employee exits.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Customized Workflows
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Design customizable offboarding workflows for resignations, retirements, and
+                      terminations to manage diverse employee exits efficiently.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Flexible Offboarding Features </h3>
+                    <p class="diverse-card-desc">
+                      Diverse HRMS enables customizable offboarding tasks tailored to organizational
+                      and individual needs.
+                    </p>
+                  </li>
+                </ul>
+                <a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block"
+                  href="/docs/offboarding/">Explore
+                  More</a>
+              </div>
+              <div class="diverse-panel-media">
+                <div class="hrl-modules__screenshot-div">
+                  <img alt="A screenshot of the offboarding module" class="diverse-media-img" height="829"
+                    src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-offboarding-screenshot.webp"
+                    width="1439" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hrl-owl-item">
+            <div class="diverse-glass-panel panel-variant-1">
+              <div class="diverse-panel-content">
+                <div class="hrl-docs-module-label"><span><a href="/docs/help-desk/">Help Desk</a></span>
+                </div>
+                <ul class="diverse-feature-cards">
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Centralized Frequently Asked Questions
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Diverse Help Desk centralizes FAQs, enabling quick solutions, reducing
+                      repetitive inquiries, and boosting self-service efficiency.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Efficient Ticket Handling
+                    </h3>
+                    <p class="diverse-card-desc">
+                      The system offers robust ticket management with automated workflows,
+                      multi-channel creation, and real-time updates for efficient support resolution.
+                    </p>
+                  </li>
+                  <li class="diverse-card">
+                    <h3 class="diverse-card-title">
+                      Prioritization and Escalation
+                    </h3>
+                    <p class="diverse-card-desc">
+                      Tickets are prioritized by urgency and impact, ensuring critical issues are
+                      swiftly escalated and resolved efficiently.
+                    </p>
+                  </li>
+                </ul>
+                <a class="hrl-link hrl-link--primary hrl-link--title-font hrl-link--arrow d-inline-block"
+                  href="/docs/help-desk/">Explore
+                  More</a>
+              </div>
+              <div class="diverse-panel-media">
+                <div class="hrl-modules__screenshot-div">
+                  <img alt="A screenshot of the help desk module" class="diverse-media-img" height="829"
+                    src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-helpdesk-screenshot.webp"
+                    width="1439" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hrl-owl-carousel-count"></div>
+        <div class="hrl-owl-carousel-progress">
+          <div class="hrl-owl-carousel-progress-bar"></div>
+        </div>
+        <div class="hrl-owl-carousel-navigation">
+          <button aria-label="Go to previous slide" class="hrl-owl-carousel-prev hrl-nav-button">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <button aria-label="Go to next slide" class="hrl-owl-carousel-next hrl-nav-button">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials section -->
+    <section class="hr-container py-4">
+      <h3 class="hrl-faq-title my-2">Words From Our Clients</h3>
+      <p class="hrl-hero__lead">
+        The proof of our performance lies in the people who use Diverse every day.
+        Real stories from real users who’ve transformed their journey.
+      </p>
+      <!-- FIXED BUBBLE CONTAINER -->
+      <!-- <div class="testimonial-card hrl-home-app-container"> -->
+      <div class="diverse-glass-testimonial">
+        <!-- Quote icon stays fixed -->
+        <img alt="Quote Icon" class="quote-icon"
+          src="wp-content/themes/diverse-wp-theme-main/assets/images/home-crm/icon.svg" />
+        <!-- SWIPER (only contents slide) -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- ONLY CONTENT SLIDES -->
+            <div class="swiper-slide">
+              <div class="testimonial-header">
+                <div class="t-img">
+                  <img alt="Fashion Bazar" src="wp-content/uploads/2025/11/user.png" />
+                </div>
+                <div>
+                  <h4 class="t-name">Fashion Bazar</h4>
+                  <p class="t-role">Junaid-IT Manager-India</p>
+                  <div class="t-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                </div>
+              </div>
+              <p class="t-text"
+                data-full="We recently switched to Diverse HRMS and couldn't be happier! After using a multinational brand's HRMS, we found their pricing to be a bit steep. Diverse's tailored solution has been a perfect fit, covering all our HR needs with 100% satisfaction. We highly recommend Diverse for their customized approach and excellent service. A great alternative for businesses seeking a cost-effective, feature-rich HRMS !"
+                data-short="We recently switched to Diverse HRMS and couldn't be happier! After using a multinational brand's HRMS, we found their pricing…">
+                We recently switched to Diverse HRMS and couldn't be happier! After using a multinational brand's HRMS,
+                we found their pricing…</p>
+              <button class="read-more-btn">Read More</button>
+            </div><!-- /swiper-slide -->
+            <!-- ONLY CONTENT SLIDES -->
+            <div class="swiper-slide">
+              <div class="testimonial-header">
+                <div class="t-img">
+                  <img alt="Hajgulf" src="wp-content/uploads/2025/11/user.png" />
+                </div>
+                <div>
+                  <h4 class="t-name">Hajgulf</h4>
+                  <p class="t-role">Sreehari-IT Manager-Bahrain</p>
+                  <div class="t-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                </div>
+              </div>
+              <p class="t-text"
+                data-full="I’ve been using Diverse and it’s made my work so much easier. It’s user-friendly, efficient, and has really improved how I get things done. Highly recommend it !"
+                data-short="I’ve been using Diverse and it’s made my work so much easier. It’s user-friendly, efficient, and has really improved how…">
+                I’ve been using Diverse and it’s made my work so much easier. It’s user-friendly, efficient, and has
+                really improved how…</p>
+              <button class="read-more-btn">Read More</button>
+            </div><!-- /swiper-slide -->
+            <!-- ONLY CONTENT SLIDES -->
+            <div class="swiper-slide">
+              <div class="testimonial-header">
+                <div class="t-img">
+                  <img alt="MG Steel Industries Pvt Ltd" src="wp-content/uploads/2025/11/user.png" />
+                </div>
+                <div>
+                  <h4 class="t-name">MG Steel Industries Pvt Ltd</h4>
+                  <p class="t-role">Paras jain - MD-Nepal</p>
+                  <div class="t-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                </div>
+              </div>
+              <p class="t-text"
+                data-full="My experience with Horrila team was much better than I had expected. Though my work had not been completed due to some technical issues...and also due to my timings issue, support I got throughout this time was exceptional..No if no but, they just did what was best possible."
+                data-short="My experience with Horrila team was much better than I had expected. Though my work had not been completed due…">
+                My experience with Horrila team was much better than I had expected. Though my work had not been
+                completed due…</p>
+              <button class="read-more-btn">Read More</button>
+            </div><!-- /swiper-slide -->
+            <!-- ONLY CONTENT SLIDES -->
+            <div class="swiper-slide">
+              <div class="testimonial-header">
+                <div class="t-img">
+                  <img alt="Just Simply Marketing" src="wp-content/uploads/2025/11/user.png" />
+                </div>
+                <div>
+                  <h4 class="t-name">Just Simply Marketing</h4>
+                  <p class="t-role">Lianna-Operations Consultant- Malaysia</p>
+                  <div class="t-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                </div>
+              </div>
+              <p class="t-text"
+                data-full="Diverse provided a free and efficient software for our HR needs with our start-up. It’s a great alternative to expensive software that adds up. Diverse’s ability to provide a demo is the cherry on top!"
+                data-short="Diverse provided a free and efficient software for our HR needs with our start-up. It’s a great alternative to expensive…">
+                Diverse provided a free and efficient software for our HR needs with our start-up. It’s a great
+                alternative to expensive…</p>
+              <button class="read-more-btn">Read More</button>
+            </div><!-- /swiper-slide -->
+            <!-- ONLY CONTENT SLIDES -->
+            <div class="swiper-slide">
+              <div class="testimonial-header">
+                <div class="t-img">
+                  <img alt="Betasaurus" src="wp-content/uploads/2025/11/user.png" />
+                </div>
+                <div>
+                  <h4 class="t-name">Betasaurus</h4>
+                  <p class="t-role">Mohith - Founder of Betasaurus-India</p>
+                  <div class="t-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                </div>
+              </div>
+              <p class="t-text" data-full="Diverse is good, above expectations. Received good installation support also.
 
 However some modules like user addition and management should be easier to use.
 
-I am running it to manage my complete team. Good tool overall" data-short="Diverse is good, above expectations. Received good installation support also. However some modules like user addition and management should be…">
-   Diverse is good, above expectations. Received good installation support also. However some modules like user addition and management should be…</p>
-<button class="read-more-btn">Read More</button>
-</div><!-- /swiper-slide -->
-<!-- ONLY CONTENT SLIDES -->
-<div class="swiper-slide">
-<div class="testimonial-header">
-<div class="t-img">
-<img alt="Whitehorse Manpower Pvt. Ltd" src="wp-content/uploads/2025/11/user.png"/>
-</div>
-<div>
-<h4 class="t-name">Whitehorse Manpower Pvt. Ltd</h4>
-<p class="t-role">Mahesh- Operations Manager-India</p>
-<div class="t-stars">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-</div>
-</div>
-</div>
-<p class="t-text" data-full="Efficient and User-Friendly HRMS Solution.
+I am running it to manage my complete team. Good tool overall"
+                data-short="Diverse is good, above expectations. Received good installation support also. However some modules like user addition and management should be…">
+                Diverse is good, above expectations. Received good installation support also. However some modules like
+                user addition and management should be…</p>
+              <button class="read-more-btn">Read More</button>
+            </div><!-- /swiper-slide -->
+            <!-- ONLY CONTENT SLIDES -->
+            <div class="swiper-slide">
+              <div class="testimonial-header">
+                <div class="t-img">
+                  <img alt="Whitehorse Manpower Pvt. Ltd" src="wp-content/uploads/2025/11/user.png" />
+                </div>
+                <div>
+                  <h4 class="t-name">Whitehorse Manpower Pvt. Ltd</h4>
+                  <p class="t-role">Mahesh- Operations Manager-India</p>
+                  <div class="t-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                </div>
+              </div>
+              <p class="t-text"
+                data-full="Efficient and User-Friendly HRMS Solution.
 
 We at Whitehorse Manpower have been using Diverse HMRS for managing our HR operations, and the experience has been excellent. The platform is intuitive, well-organized, and tailored for modern HR needs.
 
 Diverse has significantly improved our attendance tracking, payroll management, and employee data organization. The dashboard is simple yet powerful, allowing our HR team to manage day-to-day tasks smoothly. We especially appreciate the automation features and customizable reports, which save us a great deal of time and effort.
 
-The support team is responsive and helpful, ensuring that any queries are resolved quickly. Overall, Diverse HMRS has become an integral part of our HR operations, and we would highly recommend it to other organizations looking for a reliable and efficient HR management system." data-short="Efficient and User-Friendly HRMS Solution. We at Whitehorse Manpower have been using Diverse HMRS for managing our HR operations, and…">
-   Efficient and User-Friendly HRMS Solution. We at Whitehorse Manpower have been using Diverse HMRS for managing our HR operations, and…</p>
-<button class="read-more-btn">Read More</button>
-</div><!-- /swiper-slide -->
-<!-- ONLY CONTENT SLIDES -->
-<div class="swiper-slide">
-<div class="testimonial-header">
-<div class="t-img">
-<img alt="Akase Solutions" src="wp-content/uploads/2025/11/user.png"/>
-</div>
-<div>
-<h4 class="t-name">Akase Solutions</h4>
-<p class="t-role">Prince -Founder of Akase Solutions-- Ghana</p>
-<div class="t-stars">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-</div>
-</div>
-</div>
-<p class="t-text" data-full="Diverse HRMS has been an excellent, cost-effective HR solution for me. The comprehensive and user-friendly platform, which covers everything from attendance to payroll, immediately streamlined operations and proved that powerful, customizable HR tools don't require proprietary fees. I just wish they will up their game a little when it comes to responding to queries. If responding to queries is delayed because of staff strength, then they can employ more people to work with them. I am even available to work (you, Jamsheena, have been very very supportive and I hope they get more people like you to work with). Thank you." data-short="Diverse HRMS has been an excellent, cost-effective HR solution for me. The comprehensive and user-friendly platform, which covers everything from…">
-   Diverse HRMS has been an excellent, cost-effective HR solution for me. The comprehensive and user-friendly platform, which covers everything from…</p>
-<button class="read-more-btn">Read More</button>
-</div><!-- /swiper-slide -->
-</div>
-<div class="swiper-pagination"></div>
-</div><!-- /swiper -->
-</div>
-</section>
-<section class="hrl-faq hr-container py-2">
-<h3 class="hrl-faq-title my-2">Frequently Asked Questions</h3>
-<div class="hrl-faq-item active">
-<div class="hrl-faq-question">
-<h3>Why do businesses make use of HRMS software?</h3>
-<span class="hrl-faq-toggle">_</span>
-</div>
-<div class="hrl-faq-answer">
-<p>Companies utilize human resource management software to automate HR activities, increase
-                    productivity, decrease mistakes, and assure labor law compliance.</p>
-</div>
-</div>
-<div class="hrl-faq-item">
-<div class="hrl-faq-question">
-<h3>Can Diverse be customized to fit specific business requirements?</h3>
-<span class="hrl-faq-toggle">+</span>
-</div>
-<div class="hrl-faq-answer">
-<p>Yes, Diverse's open-source framework allows organizations to tailor modules, workflows, and features
-                    to align with their unique HR management processes.</p>
-</div>
-</div>
-<div class="hrl-faq-item">
-<div class="hrl-faq-question">
-<h3>Is Diverse ideal for both small and large businesses?</h3>
-<span class="hrl-faq-toggle">+</span>
-</div>
-<div class="hrl-faq-answer">
-<p>Yes, Diverse’s modular and scalable design makes it ideal for businesses of all sizes, from startups
-                    to large enterprises, across various industries.</p>
-</div>
-</div>
-<div class="hrl-faq-item">
-<div class="hrl-faq-question">
-<h3>How does Diverse improve HR operations?</h3>
-<span class="hrl-faq-toggle">+</span>
-</div>
-<div class="hrl-faq-answer">
-<p>Diverse automates key HR processes, reduces manual work, enhances accuracy in payroll and attendance
-                    tracking, and provides detailed insights for better workforce management.</p>
-</div>
-</div>
-<div class="hrl-faq-item">
-<div class="hrl-faq-question">
-<h3>Does Diverse require technical expertise to use?</h3>
-<span class="hrl-faq-toggle">+</span>
-</div>
-<div class="hrl-faq-answer">
-<p>No, Diverse has a user-friendly interface designed for HR professionals, but advanced customization
-                    may require IT expertise or developer support.</p>
-</div>
-</div>
-<div class="hrl-faq-item">
-<div class="hrl-faq-question">
-<h3>Does HRMS software serve remote and hybrid work arrangements?</h3>
-<span class="hrl-faq-toggle">+</span>
-</div>
-<div class="hrl-faq-answer">
-<p>Yes, modern HRMS platforms provide cloud-based access, enabling remote teams to log attendance,
-                    manage leaves, and collaborate efficiently.</p>
-</div>
-</div>
-<div class="hrl-faq-item">
-<div class="hrl-faq-question">
-<h3>Can an HRMS be integrated with other corporate applications?</h3>
-<span class="hrl-faq-toggle">+</span>
-</div>
-<div class="hrl-faq-answer">
-<p>Most HRMS solutions support integration with accounting software, ERP systems, and communication
-                    tools to streamline business operations.</p>
-</div>
-</div>
-<div class="hrl-faq-item">
-<div class="hrl-faq-question">
-<h3>What aspects should a corporation consider while deciding on an HRMS?</h3>
-<span class="hrl-faq-toggle">+</span>
-</div>
-<div class="hrl-faq-answer">
-<p>Companies should evaluate factors like scalability, ease of use, customization options, integration
-                    capabilities, and customer support when selecting an HRMS.</p>
-</div>
-</div>
-<div class="hrl-faq-item">
-<div class="hrl-faq-question">
-<h3>What are the latest trends in HRMS security and data protection?</h3>
-<span class="hrl-faq-toggle">+</span>
-</div>
-<div class="hrl-faq-answer">
-<p>AI-powered threat detection, blockchain for secure personnel data, and multi-factor authentication
-                    for improved access management are among the latest trends.</p>
-</div>
-</div>
-<div class="hrl-faq-item">
-<div class="hrl-faq-question">
-<h3>How can HRMS contribute to employee engagement?</h3>
-<span class="hrl-faq-toggle">+</span>
-</div>
-<div class="hrl-faq-answer">
-<p>Employee self-service portals, performance monitoring, and feedback tools are all part of modern HRMS
-                    platforms, which help to increase engagement and workplace happiness.</p>
-</div>
-</div>
-<div class="hrl-faq-show">
-<button>Show More<ion-icon name="chevron-down-outline"></ion-icon></button>
-</div>
-</section>
+The support team is responsive and helpful, ensuring that any queries are resolved quickly. Overall, Diverse HMRS has become an integral part of our HR operations, and we would highly recommend it to other organizations looking for a reliable and efficient HR management system."
+                data-short="Efficient and User-Friendly HRMS Solution. We at Whitehorse Manpower have been using Diverse HMRS for managing our HR operations, and…">
+                Efficient and User-Friendly HRMS Solution. We at Whitehorse Manpower have been using Diverse HMRS for
+                managing our HR operations, and…</p>
+              <button class="read-more-btn">Read More</button>
+            </div><!-- /swiper-slide -->
+            <!-- ONLY CONTENT SLIDES -->
+            <div class="swiper-slide">
+              <div class="testimonial-header">
+                <div class="t-img">
+                  <img alt="Akase Solutions" src="wp-content/uploads/2025/11/user.png" />
+                </div>
+                <div>
+                  <h4 class="t-name">Akase Solutions</h4>
+                  <p class="t-role">Prince -Founder of Akase Solutions-- Ghana</p>
+                  <div class="t-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                </div>
+              </div>
+              <p class="t-text"
+                data-full="Diverse HRMS has been an excellent, cost-effective HR solution for me. The comprehensive and user-friendly platform, which covers everything from attendance to payroll, immediately streamlined operations and proved that powerful, customizable HR tools don't require proprietary fees. I just wish they will up their game a little when it comes to responding to queries. If responding to queries is delayed because of staff strength, then they can employ more people to work with them. I am even available to work (you, Jamsheena, have been very very supportive and I hope they get more people like you to work with). Thank you."
+                data-short="Diverse HRMS has been an excellent, cost-effective HR solution for me. The comprehensive and user-friendly platform, which covers everything from…">
+                Diverse HRMS has been an excellent, cost-effective HR solution for me. The comprehensive and
+                user-friendly platform, which covers everything from…</p>
+              <button class="read-more-btn">Read More</button>
+            </div><!-- /swiper-slide -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div><!-- /swiper -->
+      </div>
+    </section>
+    <section class="hrl-faq hr-container py-2">
+      <h3 class="hrl-faq-title my-2">Frequently Asked Questions</h3>
+      <div class="hrl-faq-item active">
+        <div class="hrl-faq-question">
+          <h3>Why do businesses make use of HRMS software?</h3>
+          <span class="hrl-faq-toggle">_</span>
+        </div>
+        <div class="hrl-faq-answer">
+          <p>Companies utilize human resource management software to automate HR activities, increase
+            productivity, decrease mistakes, and assure labor law compliance.</p>
+        </div>
+      </div>
+      <div class="hrl-faq-item">
+        <div class="hrl-faq-question">
+          <h3>Can Diverse be customized to fit specific business requirements?</h3>
+          <span class="hrl-faq-toggle">+</span>
+        </div>
+        <div class="hrl-faq-answer">
+          <p>Yes, Diverse's open-source framework allows organizations to tailor modules, workflows, and features
+            to align with their unique HR management processes.</p>
+        </div>
+      </div>
+      <div class="hrl-faq-item">
+        <div class="hrl-faq-question">
+          <h3>Is Diverse ideal for both small and large businesses?</h3>
+          <span class="hrl-faq-toggle">+</span>
+        </div>
+        <div class="hrl-faq-answer">
+          <p>Yes, Diverse’s modular and scalable design makes it ideal for businesses of all sizes, from startups
+            to large enterprises, across various industries.</p>
+        </div>
+      </div>
+      <div class="hrl-faq-item">
+        <div class="hrl-faq-question">
+          <h3>How does Diverse improve HR operations?</h3>
+          <span class="hrl-faq-toggle">+</span>
+        </div>
+        <div class="hrl-faq-answer">
+          <p>Diverse automates key HR processes, reduces manual work, enhances accuracy in payroll and attendance
+            tracking, and provides detailed insights for better workforce management.</p>
+        </div>
+      </div>
+      <div class="hrl-faq-item">
+        <div class="hrl-faq-question">
+          <h3>Does Diverse require technical expertise to use?</h3>
+          <span class="hrl-faq-toggle">+</span>
+        </div>
+        <div class="hrl-faq-answer">
+          <p>No, Diverse has a user-friendly interface designed for HR professionals, but advanced customization
+            may require IT expertise or developer support.</p>
+        </div>
+      </div>
+      <div class="hrl-faq-item">
+        <div class="hrl-faq-question">
+          <h3>Does HRMS software serve remote and hybrid work arrangements?</h3>
+          <span class="hrl-faq-toggle">+</span>
+        </div>
+        <div class="hrl-faq-answer">
+          <p>Yes, modern HRMS platforms provide cloud-based access, enabling remote teams to log attendance,
+            manage leaves, and collaborate efficiently.</p>
+        </div>
+      </div>
+      <div class="hrl-faq-item">
+        <div class="hrl-faq-question">
+          <h3>Can an HRMS be integrated with other corporate applications?</h3>
+          <span class="hrl-faq-toggle">+</span>
+        </div>
+        <div class="hrl-faq-answer">
+          <p>Most HRMS solutions support integration with accounting software, ERP systems, and communication
+            tools to streamline business operations.</p>
+        </div>
+      </div>
+      <div class="hrl-faq-item">
+        <div class="hrl-faq-question">
+          <h3>What aspects should a corporation consider while deciding on an HRMS?</h3>
+          <span class="hrl-faq-toggle">+</span>
+        </div>
+        <div class="hrl-faq-answer">
+          <p>Companies should evaluate factors like scalability, ease of use, customization options, integration
+            capabilities, and customer support when selecting an HRMS.</p>
+        </div>
+      </div>
+      <div class="hrl-faq-item">
+        <div class="hrl-faq-question">
+          <h3>What are the latest trends in HRMS security and data protection?</h3>
+          <span class="hrl-faq-toggle">+</span>
+        </div>
+        <div class="hrl-faq-answer">
+          <p>AI-powered threat detection, blockchain for secure personnel data, and multi-factor authentication
+            for improved access management are among the latest trends.</p>
+        </div>
+      </div>
+      <div class="hrl-faq-item">
+        <div class="hrl-faq-question">
+          <h3>How can HRMS contribute to employee engagement?</h3>
+          <span class="hrl-faq-toggle">+</span>
+        </div>
+        <div class="hrl-faq-answer">
+          <p>Employee self-service portals, performance monitoring, and feedback tools are all part of modern HRMS
+            platforms, which help to increase engagement and workplace happiness.</p>
+        </div>
+      </div>
+      <div class="hrl-faq-show">
+        <button>Show More<ion-icon name="chevron-down-outline"></ion-icon></button>
+      </div>
+    </section>
 
-<section class="diverse-glass-panel diverse-cta-panel">
-<h3 class="diverse-card-title" style="text-align: center;">It's Free,It's Open Source
-<p class="diverse-card-desc">With Diverse HRMS Software you have the total freedom to use it
-                however you see fit. No limits, no asterisks.</p>
-<div class="diverse-hero-actions">
-<a class="hrl-primary-button hrl-btn" href="http://demo.diverse.com">
-<span><ion-icon name="rocket-sharp"></ion-icon>Get Started Free</span>
-</a>
-<a class="hrl-secondary-button hrl-btn" href="https://github.com/diverse-opensource/diverse/">
-<span><ion-icon name="logo-github"></ion-icon>View on Github</span>
-</a>
-</div>
-</h3></section>
-<section class="hr-container py-4">
-<!-- <h3 class="hr-heading hr-heading--h2" style="text-align: center;">It's Free,It's Open Source</h1>
+    <section class="diverse-glass-panel diverse-cta-panel">
+      <h3 class="diverse-card-title" style="text-align: center;">It's Free,It's Open Source
+        <p class="diverse-card-desc">With Diverse HRMS Software you have the total freedom to use it
+          however you see fit. No limits, no asterisks.</p>
+        <div class="diverse-hero-actions">
+          <a class="hrl-primary-button hrl-btn" href="http://demo.diverse.com">
+            <span><ion-icon name="rocket-sharp"></ion-icon>Get Started Free</span>
+          </a>
+          <a class="hrl-secondary-button hrl-btn" href="https://github.com/diverse-opensource/diverse/">
+            <span><ion-icon name="logo-github"></ion-icon>View on Github</span>
+          </a>
+        </div>
+      </h3>
+    </section>
+    <section class="hr-container py-4">
+      <!-- <h3 class="hr-heading hr-heading--h2" style="text-align: center;">It's Free,It's Open Source</h1>
             <p class="hrl-hero__lead">With Diverse HRMS Software you have the total freedom to use it
                 however you see fit. No limits, no asterisks.</p> -->
-<div class="hrl-home-video-container">
-<div>
-<h3>We will guide you every step of the way</h3>
-</div>
-<div class="hrl-home-video-div">
-<button aria-label="Play video" class="hrl-home-video" onclick="hrlOpenModal()">
-<img alt="" class="hrl-home-video__img" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-youtube-preview.webp"/>
-</button>
-<div class="hrl-home-video__text">
-<span>How to start with Diverse step-by-step video tutorials.</span>
-<a class="hrl-primary-button hrl-btn" href="/videos/"> <ion-icon name="logo-youtube"></ion-icon> See tutorials </a>
-</div>
-</div>
-</div>
-</section>
-<section class="diverse-glass-panel diverse-cta-panel">
-<h3 class="diverse-card-title" style="text-align: center;">For queries contact
-<p class="diverse-card-desc">Straightforward support, no conditions, no confusion and 
-                unrestricted assistance designed around your needs.</p>
-<div class="diverse-hero-actions">
-<a class="hrl-primary-button hrl-btn" href="/contact-us">
-<span>Contact Us</span>
-</a>
-</div>
+      <div class="hrl-home-video-container">
+        <div>
+          <h3>We will guide you every step of the way</h3>
+        </div>
+        <div class="hrl-home-video-div">
+          <button aria-label="Play video" class="hrl-home-video" onclick="hrlOpenModal()">
+            <img alt="" class="hrl-home-video__img"
+              src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-youtube-preview.webp" />
+          </button>
+          <div class="hrl-home-video__text">
+            <span>How to start with Diverse step-by-step video tutorials.</span>
+            <a class="hrl-primary-button hrl-btn" href="/videos/"> <ion-icon name="logo-youtube"></ion-icon> See
+              tutorials </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="diverse-glass-panel diverse-cta-panel">
+      <h3 class="diverse-card-title" style="text-align: center;">For queries contact
+        <p class="diverse-card-desc">Straightforward support, no conditions, no confusion and
+          unrestricted assistance designed around your needs.</p>
+        <div class="diverse-hero-actions">
+          <a class="hrl-primary-button hrl-btn" href="/contact-us">
+            <span>Contact Us</span>
+          </a>
+        </div>
 
-</h3></section>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,          
-    spaceBetween: 30,          
-    loop: true,               
-    autoplay: {
-      delay: 4000,             
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,        
-    },
-    breakpoints: {
-      320: {                 
+      </h3>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
-        spaceBetween: 20,
-      },
-     
-    },
-  });
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
 
-  function setupReadMore() {
-    document.querySelectorAll(".read-more-btn").forEach(button => {
-      button.onclick = function () {
+        },
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
 
-        const textEl = this.previousElementSibling;
-        const fullText = textEl.getAttribute("data-full");
-        const shortText = textEl.getAttribute("data-short");
+        function setupReadMore() {
+          document.querySelectorAll(".read-more-btn").forEach(button => {
+            button.onclick = function () {
 
-        if (textEl.classList.contains("expanded")) {
-          // collapse
-          textEl.classList.remove("expanded");
-          textEl.textContent = shortText;
-          this.textContent = "Read More";
+              const textEl = this.previousElementSibling;
+              const fullText = textEl.getAttribute("data-full");
+              const shortText = textEl.getAttribute("data-short");
 
-          // 👉 Resume swiper autoplay (if enabled)
-          if (swiper.autoplay) {
-            swiper.autoplay.start();
-          }
+              if (textEl.classList.contains("expanded")) {
+                // collapse
+                textEl.classList.remove("expanded");
+                textEl.textContent = shortText;
+                this.textContent = "Read More";
 
-        } else {
-          // expand
-          textEl.classList.add("expanded");
-          textEl.textContent = fullText;
-          this.textContent = "Read Less";
-
-          // 👉 Pause swiper autoplay when user reads
-          if (swiper.autoplay) {
-            swiper.autoplay.stop();
-          }
-        }
-      };
-    });
-  }
-
-  // Initial setup
-  setupReadMore();
-
-  // Swiper duplicates slides → rebind buttons
-  swiper.on("slideChangeTransitionEnd", setupReadMore);
-
-});
-</script>
-<div class="hrl-video-modal" id="hrl-video-modal">
-<div class="hrl-video-modal-content">
-<span class="hrl-video-close" onclick="hrlCloseModal()">×</span>
-<div class="hrl-video-iframe-container">
-<iframe allowfullscreen="" frameborder="0" id="hrl-video-iframe" src=""></iframe>
-</div>
-</div>
-</div>
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const faqItems = document.querySelectorAll(".hrl-faq-item");
-            const showMoreBtn = document.querySelector(".hrl-faq-show button");
-            let isExpanded = false;
-
-            // Initially show only the first 4 FAQs
-            faqItems.forEach((item, index) => {
-                if (index < 4) {
-                    item.classList.add("visible");
+                // 👉 Resume swiper autoplay (if enabled)
+                if (swiper.autoplay) {
+                  swiper.autoplay.start();
                 }
-            });
 
-            // Toggle FAQ Items on click, but only if they're visible
-            faqItems.forEach((item) => {
-                item.addEventListener("click", function () {
-                    if (!item.classList.contains("visible")) return; // Ignore clicks on hidden items
+              } else {
+                // expand
+                textEl.classList.add("expanded");
+                textEl.textContent = fullText;
+                this.textContent = "Read Less";
 
-                    // Close all other items before opening a new one
-                    faqItems.forEach((faq) => {
-                        if (faq !== item && faq.classList.contains("visible")) {
-                            faq.classList.remove("active");
-                            faq.querySelector(".hrl-faq-toggle").textContent = "+";
-                        }
-                    });
+                // 👉 Pause swiper autoplay when user reads
+                if (swiper.autoplay) {
+                  swiper.autoplay.stop();
+                }
+              }
+            };
+          });
+        }
 
-                    // Toggle the current item
-                    item.classList.toggle("active");
-                    const toggleIcon = item.querySelector(".hrl-faq-toggle");
-                    toggleIcon.textContent = item.classList.contains("active") ? "_" : "+";
-                });
-            });
+        // Initial setup
+        setupReadMore();
 
-            // Function to update FAQ visibility
-            function updateVisibility() {
-                faqItems.forEach((item, index) => {
-                    if (isExpanded || index < 4) {
-                        item.style.display = "block"; // Show the item
-                        setTimeout(() => item.classList.add("visible"), 10); // Add visible class after a short delay
-                    } else {
-                        item.classList.remove("visible");
-                        setTimeout(() => item.style.display = "none", 500); // Hide after animation
-                    }
-                });
+        // Swiper duplicates slides → rebind buttons
+        swiper.on("slideChangeTransitionEnd", setupReadMore);
 
-                showMoreBtn.innerHTML = isExpanded
-                    ? 'Show Less <ion-icon name="chevron-up-outline"></ion-icon>'
-                    : 'Show More <ion-icon name="chevron-down-outline"></ion-icon>';
-            }
+      });
+    </script>
+    <div class="hrl-video-modal" id="hrl-video-modal">
+      <div class="hrl-video-modal-content">
+        <span class="hrl-video-close" onclick="hrlCloseModal()">×</span>
+        <div class="hrl-video-iframe-container">
+          <iframe allowfullscreen="" frameborder="0" id="hrl-video-iframe" src=""></iframe>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".hrl-faq-item");
+        const showMoreBtn = document.querySelector(".hrl-faq-show button");
+        let isExpanded = false;
 
-            // Show More / Show Less Button
-            showMoreBtn.addEventListener("click", function () {
-                isExpanded = !isExpanded;
-                updateVisibility();
-            });
-
-            updateVisibility(); // Run once to initialize correctly
+        // Initially show only the first 4 FAQs
+        faqItems.forEach((item, index) => {
+          if (index < 4) {
+            item.classList.add("visible");
+          }
         });
-    </script>
-<script>
-        function hrlOpenModal() {
-            let videoUrl = "https://www.youtube.com/embed/TB4BOS8F_TQ?si=h-UMEgEBiHMhQFvE";
-            document.getElementById("hrl-video-iframe").src = videoUrl;
-            document.getElementById("hrl-video-modal").style.display = "flex";
-        }
 
-        function hrlCloseModal() {
-            document.getElementById("hrl-video-modal").style.display = "none";
-            document.getElementById("hrl-video-iframe").src = "";
-        }
+        // Toggle FAQ Items on click, but only if they're visible
+        faqItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            if (!item.classList.contains("visible")) return; // Ignore clicks on hidden items
 
-        window.onclick = function (event) {
-            let modal = document.getElementById("hrl-video-modal");
-            if (event.target == modal) {
-                hrlCloseModal();
+            // Close all other items before opening a new one
+            faqItems.forEach((faq) => {
+              if (faq !== item && faq.classList.contains("visible")) {
+                faq.classList.remove("active");
+                faq.querySelector(".hrl-faq-toggle").textContent = "+";
+              }
+            });
+
+            // Toggle the current item
+            item.classList.toggle("active");
+            const toggleIcon = item.querySelector(".hrl-faq-toggle");
+            toggleIcon.textContent = item.classList.contains("active") ? "_" : "+";
+          });
+        });
+
+        // Function to update FAQ visibility
+        function updateVisibility() {
+          faqItems.forEach((item, index) => {
+            if (isExpanded || index < 4) {
+              item.style.display = "block"; // Show the item
+              setTimeout(() => item.classList.add("visible"), 10); // Add visible class after a short delay
+            } else {
+              item.classList.remove("visible");
+              setTimeout(() => item.style.display = "none", 500); // Hide after animation
             }
+          });
+
+          showMoreBtn.innerHTML = isExpanded
+            ? 'Show Less <ion-icon name="chevron-up-outline"></ion-icon>'
+            : 'Show More <ion-icon name="chevron-down-outline"></ion-icon>';
         }
+
+        // Show More / Show Less Button
+        showMoreBtn.addEventListener("click", function () {
+          isExpanded = !isExpanded;
+          updateVisibility();
+        });
+
+        updateVisibility(); // Run once to initialize correctly
+      });
     </script>
-</main>
-<script>
+    <script>
+      function hrlOpenModal() {
+        let videoUrl = "https://www.youtube.com/embed/TB4BOS8F_TQ?si=h-UMEgEBiHMhQFvE";
+        document.getElementById("hrl-video-iframe").src = videoUrl;
+        document.getElementById("hrl-video-modal").style.display = "flex";
+      }
+
+      function hrlCloseModal() {
+        document.getElementById("hrl-video-modal").style.display = "none";
+        document.getElementById("hrl-video-iframe").src = "";
+      }
+
+      window.onclick = function (event) {
+        let modal = document.getElementById("hrl-video-modal");
+        if (event.target == modal) {
+          hrlCloseModal();
+        }
+      }
+    </script>
+  </main>
+  <script>
     $(document).ready(function () {
 
-        // Gets the video src from the data-src on each button
+      // Gets the video src from the data-src on each button
 
-        var $videoSrc;
-        $('.video-btn').click(function () {
-            $videoSrc = $(this).data("src");
-        });
-        console.log($videoSrc);
-        // when the modal is opened autoplay it  
-        $('#myModal').on('shown.bs.modal', function (e) {
+      var $videoSrc;
+      $('.video-btn').click(function () {
+        $videoSrc = $(this).data("src");
+      });
+      console.log($videoSrc);
+      // when the modal is opened autoplay it  
+      $('#myModal').on('shown.bs.modal', function (e) {
 
-            // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+        // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
 
-        })
-        // stop playing the youtube video when I close the modal
-        $('#myModal').on('hide.bs.modal', function (e) {
-            // a poor man's stop video
-            $("#video").attr('src', $videoSrc);
-        })
+      })
+      // stop playing the youtube video when I close the modal
+      $('#myModal').on('hide.bs.modal', function (e) {
+        // a poor man's stop video
+        $("#video").attr('src', $videoSrc);
+      })
     });
 
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script>
-$(document).ready(function () {
-    $('.hrl-owl-carousel').each(function (index) {
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.hrl-owl-carousel').each(function (index) {
         const $carousel = $(this);
 
         // Find the corresponding controls (using index matching)
@@ -1337,165 +1429,227 @@ $(document).ready(function () {
 
         // Initialize Owl Carousel
         $carousel.owlCarousel({
-            items: 1,
-            loop: true,
-            nav: false,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 7000,
-            onInitialized: updateCarousel,
-            onChanged: updateCarousel
+          items: 1,
+          loop: true,
+          nav: false,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 7000,
+          onInitialized: updateCarousel,
+          onChanged: updateCarousel
         });
 
         // Previous / Next button functionality
         $prevButton.on('click', function () {
-            $carousel.trigger('prev.owl.carousel');
+          $carousel.trigger('prev.owl.carousel');
         });
 
         $nextButton.on('click', function () {
-            $carousel.trigger('next.owl.carousel');
+          $carousel.trigger('next.owl.carousel');
         });
 
         // Update progress and count
         function updateCarousel(event) {
-            const totalItems = event.item.count;
-            const currentIndex = (event.item.index - event.relatedTarget._clones.length / 2 + totalItems) % totalItems + 1;
-            const progressWidth = (currentIndex / totalItems) * 100;
+          const totalItems = event.item.count;
+          const currentIndex = (event.item.index - event.relatedTarget._clones.length / 2 + totalItems) % totalItems + 1;
+          const progressWidth = (currentIndex / totalItems) * 100;
 
-            $countDisplay.text(`${currentIndex}/${totalItems}`);
-            $progressBar.css('width', `${progressWidth}%`);
+          $countDisplay.text(`${currentIndex}/${totalItems}`);
+          $progressBar.css('width', `${progressWidth}%`);
         }
+      });
     });
-});
-</script>
-<!-- <div id="footer"></div> -->
-<footer class="hrl-footer">
-<div class="hrl-footer__container hr-container">
-<div class="hrl-footer__column">
-<div class="hrl-footer__collapse">
-<div class="hrl-footer__collapse-head">
-<h4>Quick Links</h4>
-</div>
-<div class="hrl-footer__collapse-body">
-<div class="hrl-footer-navigation-container"><ul class="menu" id="menu-footer-5"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-9919 active" id="menu-item-9919"><a aria-current="page" href="/">Home</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9920" id="menu-item-9920"><a href="/docs/">Documentation</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9924" id="menu-item-9924"><a href="index.htmlfeatures/">Features</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9923" id="menu-item-9923"><a href="index.htmlblogs/">Blog</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9922" id="menu-item-9922"><a href="index.htmlsitemap/">Sitemap</a></li>
-</ul></div> </div>
-</div>
-</div>
-<div class="hrl-footer__column">
-<div class="hrl-footer__collapse">
-<div class="hrl-footer__collapse-head">
-<h4>Discover Diverse</h4>
-</div>
-<div class="hrl-footer__collapse-body">
-<div class="hrl-footer-navigation-container"><ul class="menu" id="menu-footer-menu-1"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1529" id="menu-item-1529"><a href="/what-is-diverse/">What is Diverse?</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-746" id="menu-item-746"><a href="/web-stories/">Diverse Stories</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5356" id="menu-item-5356"><a href="index.htmlcompare/">Compare Competitors</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6600" id="menu-item-6600"><a href="index.htmllocations/">Client Locations</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9981" id="menu-item-9981"><a href="index.htmlpricing/">Support</a></li>
-</ul></div> </div>
-</div>
-</div>
-<div class="hrl-footer__column">
-<div class="hrl-footer__collapse">
-<div class="hrl-footer__collapse-head">
-<h4>Features</h4>
-</div>
-<div class="hrl-footer__collapse-body">
-<div class="hrl-footer-navigation-container"><ul class="menu" id="menu-footer-menu-2"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-753" id="menu-item-753"><a href="/features/asset/">Assets</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-750" id="menu-item-750"><a href="/features/attendance/">Attendance</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-749" id="menu-item-749"><a href="/features/employee/">Employee</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751" id="menu-item-751"><a href="/features/leave/">Leave</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-748" id="menu-item-748"><a href="/features/onboarding/">Onboarding</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1448" id="menu-item-1448"><a href="/features/payroll/">Payroll</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-752" id="menu-item-752"><a href="/features/pms/">PMS</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-747" id="menu-item-747"><a href="/features/recruitment/">Recruitment</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5927" id="menu-item-5927"><a href="index.htmlfeatures/offboarding/">Offboarding</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5928" id="menu-item-5928"><a href="index.htmlfeatures/helpdesk/">Helpdesk</a></li>
-</ul></div>
-</div>
-</div>
-</div>
-<div class="hrl-footer__column">
-<div class="hrl-footer__collapse">
-<div class="hrl-footer__collapse-head">
-<h4>Source</h4>
-</div>
-<div class="hrl-footer__collapse-body">
-<div class="hrl-footer-navigation-container"><ul class="menu" id="menu-footer-menu-3"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-754" id="menu-item-754"><a href="https://github.com/diverse-opensource/diverse/">GitHub</a></li>
-</ul></div>
-</div>
-</div>
-<div class="hrl-footer__collapse">
-<div class="hrl-footer__collapse-head">
-<h4>Legal</h4>
-</div>
-<div class="hrl-footer__collapse-body">
-<div class="hrl-footer-navigation-container"><ul class="menu" id="menu-footer-menu-4"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-755" id="menu-item-755"><a href="/privacy-policy/">Privacy Policy</a></li>
-</ul></div> </div>
-</div>
-<div class="hrl-footer__collapse">
-<div class="hrl-footer__collapse">
-<a href="https://play.google.com/store/apps/details?id=com.cybrosys.horilla_project" target="_blank">
-<img alt="get it on playstore" class="hrl-footer__collapse-image" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/get-it-on-playstore.svg"/>
-</a>
-<a href="https://apps.apple.com/in/app/diverse-mobile-app/id6744724397" target="_blank">
-<img alt="get it on playstore" class="hrl-footer__collapse-image" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/get-it-on-app-store.png"/>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="hrl-footer__bottom-container hr-container">
-<span class="hrl-footer__bottom-text">© 2026 Diverse. All rights reserved.</span>
-<a href="/">
-<img alt="Diverse" class="hrl-footer__logo" height="40" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-logo-black.png" width="250"/>
-</a>
-<!-- <span class="hrl-footer__bottom-text">Built with <ion-icon name="heart-sharp" class="hrl-footer__bottom-heart"></ion-icon> by the cool folks at Diverse</span> -->
-<ul class="hrl-footer__social-items">
-<li class="hrl-footer__social-item">
-<a aria-label="Facebook" class="hrl-footer__social-link" href="https://www.facebook.com/people/Diverse/100091947807253/"><ion-icon class="hrl-footer__social-icon" name="logo-facebook" target="_blank"></ion-icon></a>
-</li>
-<li class="hrl-footer__social-item">
-<a aria-label="Twitter" class="hrl-footer__social-link" href="https://twitter.com/horillahrms">
-<span class="hrl-footer__social-icon" style="display: inline-block; margin-bottom: 4px;">
-<svg height="18px" version="1.1" viewbox="0 0 18 18" width="18px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="surface1">
-<path d="M 10.675781 7.621094 L 17.230469 0 L 15.679688 0 L 9.984375 6.617188 L 5.4375 0 L 0.191406 0 L 7.070312 10.007812 L 0.191406 18 L 1.746094 18 L 7.761719 11.011719 L 12.5625 18 L 17.808594 18 Z M 8.550781 10.097656 L 7.851562 9.097656 L 2.308594 1.167969 L 4.691406 1.167969 L 9.167969 7.570312 L 9.863281 8.566406 L 15.679688 16.882812 L 13.292969 16.882812 Z M 8.550781 10.097656 " style=" stroke:none;fill-rule:nonzero;fill:rgb(50.196078%,49.803922%,49.803922%);fill-opacity:1;"></path>
-</g>
-</svg>
-</span>
-</a>
-</li>
-<li class="hrl-footer__social-item">
-<a aria-label="Instagram" class="hrl-footer__social-link" href="https://www.instagram.com/horillahrms/"><ion-icon class="hrl-footer__social-icon" name="logo-instagram" target="_blank"></ion-icon></a>
-</li>
-<li class="hrl-footer__social-item">
-<a aria-label="Linkedin" class="hrl-footer__social-link" href="https://www.linkedin.com/company/diverse/"><ion-icon class="hrl-footer__social-icon" name="logo-linkedin" target="_blank"></ion-icon></a>
-</li>
-<li class="hrl-footer__social-item">
-<a aria-label="Github" class="hrl-footer__social-link" href="https://github.com/diverse-opensource/diverse/" target="_blank"><ion-icon class="hrl-footer__social-icon" name="logo-github"></ion-icon></a>
-</li>
-<li class="hrl-footer__social-item">
-<a aria-label="YouTube" class="hrl-footer__social-link" href="https://www.youtube.com/channel/UCvD8feLT7EKmXHaPKnWZT-w" target="_blank"><ion-icon class="hrl-footer__social-icon" name="logo-youtube"></ion-icon></a>
-</li>
-</ul>
-</div>
-</footer>
-<script type="speculationrules">
+  </script>
+  <!-- <div id="footer"></div> -->
+  <footer class="hrl-footer">
+    <div class="hrl-footer__container hr-container">
+      <div class="hrl-footer__column">
+        <div class="hrl-footer__collapse">
+          <div class="hrl-footer__collapse-head">
+            <h4>Quick Links</h4>
+          </div>
+          <div class="hrl-footer__collapse-body">
+            <div class="hrl-footer-navigation-container">
+              <ul class="menu" id="menu-footer-5">
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-9919 active"
+                  id="menu-item-9919"><a aria-current="page" href="/">Home</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9920" id="menu-item-9920">
+                  <a href="/docs/">Documentation</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9924" id="menu-item-9924">
+                  <a href="index.htmlfeatures/">Features</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9923" id="menu-item-9923">
+                  <a href="index.htmlblogs/">Blog</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9922" id="menu-item-9922">
+                  <a href="index.htmlsitemap/">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hrl-footer__column">
+        <div class="hrl-footer__collapse">
+          <div class="hrl-footer__collapse-head">
+            <h4>Discover Diverse</h4>
+          </div>
+          <div class="hrl-footer__collapse-body">
+            <div class="hrl-footer-navigation-container">
+              <ul class="menu" id="menu-footer-menu-1">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1529" id="menu-item-1529">
+                  <a href="/what-is-diverse/">What is Diverse?</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-746" id="menu-item-746"><a
+                    href="/web-stories/">Diverse Stories</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5356" id="menu-item-5356">
+                  <a href="index.htmlcompare/">Compare Competitors</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6600" id="menu-item-6600">
+                  <a href="index.htmllocations/">Client Locations</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9981" id="menu-item-9981">
+                  <a href="index.htmlpricing/">Support</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hrl-footer__column">
+        <div class="hrl-footer__collapse">
+          <div class="hrl-footer__collapse-head">
+            <h4>Features</h4>
+          </div>
+          <div class="hrl-footer__collapse-body">
+            <div class="hrl-footer-navigation-container">
+              <ul class="menu" id="menu-footer-menu-2">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-753" id="menu-item-753"><a
+                    href="/features/asset/">Assets</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-750" id="menu-item-750"><a
+                    href="/features/attendance/">Attendance</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-749" id="menu-item-749"><a
+                    href="/features/employee/">Employee</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751" id="menu-item-751"><a
+                    href="/features/leave/">Leave</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-748" id="menu-item-748"><a
+                    href="/features/onboarding/">Onboarding</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1448" id="menu-item-1448">
+                  <a href="/features/payroll/">Payroll</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-752" id="menu-item-752"><a
+                    href="/features/pms/">PMS</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-747" id="menu-item-747"><a
+                    href="/features/recruitment/">Recruitment</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5927" id="menu-item-5927">
+                  <a href="index.htmlfeatures/offboarding/">Offboarding</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5928" id="menu-item-5928">
+                  <a href="index.htmlfeatures/helpdesk/">Helpdesk</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hrl-footer__column">
+        <div class="hrl-footer__collapse">
+          <div class="hrl-footer__collapse-head">
+            <h4>Source</h4>
+          </div>
+          <div class="hrl-footer__collapse-body">
+            <div class="hrl-footer-navigation-container">
+              <ul class="menu" id="menu-footer-menu-3">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-754" id="menu-item-754"><a
+                    href="https://github.com/diverse-opensource/diverse/">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hrl-footer__collapse">
+          <div class="hrl-footer__collapse-head">
+            <h4>Legal</h4>
+          </div>
+          <div class="hrl-footer__collapse-body">
+            <div class="hrl-footer-navigation-container">
+              <ul class="menu" id="menu-footer-menu-4">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-755" id="menu-item-755"><a
+                    href="/privacy-policy/">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hrl-footer__collapse">
+          <div class="hrl-footer__collapse">
+            <a href="https://play.google.com/store/apps/details?id=com.cybrosys.horilla_project" target="_blank">
+              <img alt="get it on playstore" class="hrl-footer__collapse-image"
+                src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/get-it-on-playstore.svg" />
+            </a>
+            <a href="https://apps.apple.com/in/app/diverse-mobile-app/id6744724397" target="_blank">
+              <img alt="get it on playstore" class="hrl-footer__collapse-image"
+                src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/get-it-on-app-store.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hrl-footer__bottom-container hr-container">
+      <span class="hrl-footer__bottom-text">© 2026 Diverse. All rights reserved.</span>
+      <a href="/">
+        <img alt="Diverse" class="hrl-footer__logo" height="40"
+          src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-logo-black.png"
+          width="250" />
+      </a>
+      <!-- <span class="hrl-footer__bottom-text">Built with <ion-icon name="heart-sharp" class="hrl-footer__bottom-heart"></ion-icon> by the cool folks at Diverse</span> -->
+      <ul class="hrl-footer__social-items">
+        <li class="hrl-footer__social-item">
+          <a aria-label="Facebook" class="hrl-footer__social-link"
+            href="https://www.facebook.com/people/Diverse/100091947807253/"><ion-icon class="hrl-footer__social-icon"
+              name="logo-facebook" target="_blank"></ion-icon></a>
+        </li>
+        <li class="hrl-footer__social-item">
+          <a aria-label="Twitter" class="hrl-footer__social-link" href="https://twitter.com/horillahrms">
+            <span class="hrl-footer__social-icon" style="display: inline-block; margin-bottom: 4px;">
+              <svg height="18px" version="1.1" viewbox="0 0 18 18" width="18px" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="surface1">
+                  <path
+                    d="M 10.675781 7.621094 L 17.230469 0 L 15.679688 0 L 9.984375 6.617188 L 5.4375 0 L 0.191406 0 L 7.070312 10.007812 L 0.191406 18 L 1.746094 18 L 7.761719 11.011719 L 12.5625 18 L 17.808594 18 Z M 8.550781 10.097656 L 7.851562 9.097656 L 2.308594 1.167969 L 4.691406 1.167969 L 9.167969 7.570312 L 9.863281 8.566406 L 15.679688 16.882812 L 13.292969 16.882812 Z M 8.550781 10.097656 "
+                    style=" stroke:none;fill-rule:nonzero;fill:rgb(50.196078%,49.803922%,49.803922%);fill-opacity:1;">
+                  </path>
+                </g>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="hrl-footer__social-item">
+          <a aria-label="Instagram" class="hrl-footer__social-link"
+            href="https://www.instagram.com/horillahrms/"><ion-icon class="hrl-footer__social-icon"
+              name="logo-instagram" target="_blank"></ion-icon></a>
+        </li>
+        <li class="hrl-footer__social-item">
+          <a aria-label="Linkedin" class="hrl-footer__social-link"
+            href="https://www.linkedin.com/company/diverse/"><ion-icon class="hrl-footer__social-icon"
+              name="logo-linkedin" target="_blank"></ion-icon></a>
+        </li>
+        <li class="hrl-footer__social-item">
+          <a aria-label="Github" class="hrl-footer__social-link" href="https://github.com/diverse-opensource/diverse/"
+            target="_blank"><ion-icon class="hrl-footer__social-icon" name="logo-github"></ion-icon></a>
+        </li>
+        <li class="hrl-footer__social-item">
+          <a aria-label="YouTube" class="hrl-footer__social-link"
+            href="https://www.youtube.com/channel/UCvD8feLT7EKmXHaPKnWZT-w" target="_blank"><ion-icon
+              class="hrl-footer__social-icon" name="logo-youtube"></ion-icon></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/diverse-wp-theme-main\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script id="diverse-custom-script-js" src="wp-content/themes/diverse-wp-theme-main/build/bundle.js?ver=1.0" type="text/javascript"></script>
-<script id="live-search-js-extra" type="text/javascript">
-/* <![CDATA[ */
-var liveSearch = {"ajax_url":"https:\/\/www.diverse.com\/wp-admin\/admin-ajax.php"};
-/* ]]> */
-</script>
-<script id="live-search-js" src="wp-content/themes/diverse-wp-theme-main/live-search.js" type="text/javascript"></script>
-<script id="diverse-toggle-section-js" src="wp-content/themes/diverse-wp-theme-main/assets/js/toggle-section.js" type="text/javascript"></script>
+  <script id="diverse-custom-script-js" src="wp-content/themes/diverse-wp-theme-main/build/bundle.js?ver=1.0"
+    type="text/javascript"></script>
+  <script id="live-search-js-extra" type="text/javascript">
+    /* <![CDATA[ */
+    var liveSearch = { "ajax_url": "https:\/\/www.diverse.com\/wp-admin\/admin-ajax.php" };
+    /* ]]> */
+  </script>
+  <script id="live-search-js" src="wp-content/themes/diverse-wp-theme-main/live-search.js"
+    type="text/javascript"></script>
+  <script id="diverse-toggle-section-js" src="wp-content/themes/diverse-wp-theme-main/assets/js/toggle-section.js"
+    type="text/javascript"></script>
 </body>
+
 </html>
 <!-- plugin=object-cache-pro client=phpredis metric#hits=2805 metric#misses=17 metric#hit-ratio=99.4 metric#bytes=827842 metric#prefetches=167 metric#store-reads=30 metric#store-writes=3 metric#store-hits=177 metric#store-misses=11 metric#sql-queries=12 metric#ms-total=97.31 metric#ms-cache=9.36 metric#ms-cache-avg=0.2926 metric#ms-cache-ratio=9.6 -->
