@@ -84,9 +84,9 @@
   </header>
   <div class="modal style-scrollbar" id="searchModal">
     <div class="modal-content">
-      <span class="close"></span>
-      <form id="searchform" method="get" role="search">
-        <input autocomplete="off" id="live-search" name="s" placeholder="Search..." type="text" />
+      <form id="searchform" method="get" role="search" style="position: relative; display: flex; align-items: center;">
+        <input autocomplete="off" id="live-search" name="s" placeholder="Search..." type="text" style="width: 100%; padding-right: 40px;" />
+        <span class="close" style="position: absolute; right: 15px; cursor: pointer; font-size: 28px; line-height: 1; color: #666;">&times;</span>
       </form>
       <div id="search-results"></div> <!-- Add this for AJAX results -->
     </div>
@@ -110,7 +110,7 @@
 
     var span = document.getElementsByClassName("close")[0];
 
-    var inputField = document.getElementById("s");
+    var inputField = document.getElementById("live-search");
 
     btn.onclick = function () {
       modal.style.display = "block";
