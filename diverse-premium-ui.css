@@ -358,3 +358,22 @@ h6,
 * {
     box-sizing: border-box;
 }
+
+/* Center alignment for the bottom CTA panel */
+.diverse-cta-panel {
+    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 100px auto !important;
+}
+
+.diverse-cta-panel h3 {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+}
