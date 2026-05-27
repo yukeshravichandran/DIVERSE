@@ -205,3 +205,83 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
         font-size: 3.5rem !important;
     }
 }
+
+/* 6. Overriding Old Horilla Image Styles that cause misalignments */
+.hrl-modules__screenshot-div,
+.hrl-hero__lead-image-container,
+.hrl-hero__cta-image-container {
+    position: static !important;
+    height: auto !important;
+    width: 100% !important;
+    background: transparent !important;
+}
+
+.hrl-modules__screenshot, 
+.hrl-hero__lead-image, 
+.hrl-hero__lead-image-2,
+.hrl-hero__lead-image-3,
+.diverse-media-img {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    transform: none; /* override old transform if any */
+}
+
+/* Restore the 3D hover effect we added, but ensure it's not overridden by Horilla */
+.diverse-media-img {
+    transform: perspective(1000px) rotateY(-5deg) !important;
+    transition: transform 0.5s ease !important;
+}
+
+.panel-variant-1 .diverse-media-img {
+    transform: perspective(1000px) rotateY(5deg) !important;
+}
+
+.diverse-media-img:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.02) !important;
+}
+
+/* 7. Overriding Old Horilla Styles for Masonry Items & Cards */
+.diverse-masonry-item .hr-feature-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.diverse-masonry-item .hr-feature-item__title {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    position: static !important;
+}
+
+.diverse-masonry-item .hr-feature-item__desc {
+    font-size: 1rem !important;
+    color: #475569 !important;
+    margin: 0 !important;
+    position: static !important;
+    line-height: 1.6 !important;
+}
+
+/* Prevent overlapping text by ensuring flex wraps and limits widths */
+.diverse-glass-panel {
+    flex-wrap: wrap; /* Allows stacking if too narrow */
+}
+
+/* Make sure text doesn't flow outside the cards */
+.diverse-card, .diverse-masonry-item {
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/* Ensure global box sizing so paddings don't blow up widths */
+* {
+    box-sizing: border-box;
+}
+
+
