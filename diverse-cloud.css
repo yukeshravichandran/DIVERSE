@@ -94,9 +94,10 @@ img[src*="horilla-logo"],
 
 .diverse-custom-logo {
     display: inline-block !important;
-    height: 45px;
-    width: auto;
-    vertical-align: middle;
+    height: 55px !important;
+    width: auto !important;
+    vertical-align: middle !important;
+    margin-top: -5px; /* slight vertical alignment bump */
 }
 
 /* Hide the highlight squiggle under the hero text */
