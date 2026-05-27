@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en-US"
+    xmlns:og="http://opengraphprotocol.org/schema/"
+    xmlns:fb="http://www.facebook.com/2008/fbml" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="wp-content/themes/diverse-wp-theme-main/assets/images/brand/diverse-logo-icon.ico" />
+    <link rel="preload" href="wp-content/themes/diverse-wp-theme-main/assets/css/style.min.css" >
+    
+<!-- 	 -->
+
+
+    
+
+    
+
+    <link rel="stylesheet" href="diverse-core.css">
+
+    <link rel="stylesheet" href="diverse-cloud.css">
+</head>
+<body>
+    
+	
+	        
+    <div class="ad-close-btn">
+        <button id="close-btn" class="close-btn-icon" aria-label="Close">
+            <ion-icon name="close-outline" class="close-icon"></ion-icon>
+        </button>
+    </div>
+</div>
+    <header class="hr-header">
+        <div class="hr-container hr-header__container">
+            <a href="index.html">
+                <img src="wp-content/themes/diverse-wp-theme-main/assets/images/brand/diverse-logo.png"
+                    class="hr-header__logo" alt="Diverse" width="250" height="40" />
+            </a>
+             <div class="hr-header__menu-icon-search">
+            <button id="searchBtn" class="hr-blog-search-icon"><ion-icon name="search-outline"></ion-icon></button>
+            <a href="#" role="button" class="hr-header__menu-icon-btn">
+                <ion-icon id="openMenu" class="hr-header__menu-icon" name="reorder-two-sharp"></ion-icon>
+                <ion-icon id="closeMenu" class="hr-header__menu-icon hr-header__menu-icon--hide" name="close-sharp"></ion-icon>
+            </a>
+            <nav class="hr-header__nav hr-header__nav--hide">
+                           <div class="hr-main-navigation-container"><ul id="menu-main-navigation" class="hr-main-navigation"><li id="menu-item-738" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-738"><a href="/">Home</a></li>
+<li id="menu-item-12152" class="new-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-12152"><a href="index.htmlcrm/">CRM</a></li>
+<li id="menu-item-12134" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-12134"><span class="menu-label">Features</span>
+<ul class="sub-menu">
+	<li id="menu-item-1199" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-55 current_page_item menu-item-1199 active"><a href="index.htmlfeatures/">HR</a></li>
+	<li id="menu-item-12137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12137"><a href="index.htmlcrm-features/">CRM</a></li>
+</ul>
+</li>
+<li id="menu-item-739" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-739"><a href="http://docs.diverse.com/">Docs</a></li>
+<li id="menu-item-11248" class="new-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-11248"><a href="https://cloud.diverse.com/">Cloud</a></li>
+<li id="menu-item-6433" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6433"><a href="/blogs/">Blogs</a></li>
+<li id="menu-item-6434" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6434"><a href="/videos/">Videos</a></li>
+<li id="menu-item-11595" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11595"><span class="menu-label">Pricing</span>
+<ul class="sub-menu">
+	<li id="menu-item-9996" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9996"><a href="index.htmlpricing/">Support</a></li>
+	<li id="menu-item-11598" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11598"><a href="index.htmlimplementation/">Implementation</a></li>
+</ul>
+</li>
+<li id="menu-item-6435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6435"><a href="/contact-us/">Contact Us</a></li>
+</ul></div>            </nav>
+            </div>
+
+
+        </div>
+    
+    </header>
+	 <div id="searchModal" class="modal style-scrollbar">
+          <div class="modal-content">
+            <span class="close"></span>
+            <form role="search" method="get" id="searchform">
+              <input type="text" name="s" id="live-search" placeholder="Search..." autocomplete="off" />
+            </form>
+            <div id="search-results"></div>  <!-- Add this for AJAX results -->
+          </div>
+        </div>
+ <script>
+      document
+        .getElementById("close-btn")
+        .addEventListener("click", function () {
+          const banner = document.getElementById("ad-banner");
+          banner.style.opacity = "0";
+          banner.style.height = "0px";
+          setTimeout(function () {
+            banner.style.display = "none";
+          }, 500);
+        });
+    </script>
+    <script>
+  var modal = document.getElementById("searchModal");
+
+  var btn = document.getElementById("searchBtn");
+
+  var span = document.getElementsByClassName("close")[0];
+
+  var inputField = document.getElementById("s");
+
+  btn.onclick = function() {
+    modal.style.display = "block";
+    inputField.focus(); // Set focus on the input field
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<script>
+  jQuery(document).ready(function($) {
+    $('#live-search').on('keyup', function() {
+      const input = $(this).val().trim();
+      const resultsBox = $('#search-results');
+
+      if (input.length < 2) {
+        resultsBox.empty();
+        return;
+      }
+
+      $.ajax({
+        url: liveSearch.ajax_url,
+        method: 'POST',
+        data: {
+          action: 'live_search',
+          keyword: input
+        },
+        success: function(response) {
+          resultsBox.empty();
+          if (response.success && response.data.length) {
+            // Create full-word OR regex for all keywords
+            const keywords = input.split(/\s+/).filter(k => k.length > 0);
+            const keywordRegex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'gi');
+
+            response.data.forEach(item => {
+              const highlightedTitle = item.title.replace(keywordRegex, '<span class="highlight">$1</span>');
+              const highlightedExcerpt = item.excerpt.replace(keywordRegex, '<span class="highlight">$1</span>');
+
+              resultsBox.append(`
+              <div class="search-result-item">
+                <a href="${item.link}">
+                  ${item.thumbnail ? `<img src="${item.thumbnail}" alt="" width="40" style="margin-right:10px;"/>` : ''}
+                  <div>
+                    <div class="result-title">${highlightedTitle}</div>
+                    <div class="result-excerpt">${highlightedExcerpt}</div>
+                  </div>
+                </a>
+              </div>
+            `);
+            });
+          } else {
+            resultsBox.append('<div>No results found</div>');
+          }
+        }
+      });
+    });
+  });
+</script>
+
+	 <script>
+      document
+        .getElementById("close-btn")
+        .addEventListener("click", function () {
+          const banner = document.getElementById("ad-banner");
+          banner.style.opacity = "0";
+          banner.style.height = "0px";
+          setTimeout(function () {
+            banner.style.display = "none";
+          }, 500);
+        });
+    </script>
+	
+	
+<script>
+  // Dropdown menu functionality
+  jQuery(document).ready(function($) {
+    // Add dropdown indicator for menu items with children
+    $('.hr-main-navigation .menu-item-has-children > .menu-label').append('<span class="dropdown-icon"><ion-icon name="chevron-down-outline"></ion-icon></span>');
+    
+    // Mobile: toggle dropdown on click for span labels
+    $('.hr-main-navigation .menu-item-has-children > .menu-label').on('click', function(e) {
+      if ($(window).width() <= 768) {
+        $(this).parent().toggleClass('dropdown-active');
+        $(this).next('.sub-menu').stop(true, true).slideToggle(300);
+      }
+    });
+    
+    // Desktop dropdown on hover
+    if ($(window).width() > 768) {
+      $('.hr-main-navigation .menu-item-has-children').hover(
+        function() {
+          $(this).addClass('dropdown-active');
+          $(this).children('.sub-menu').stop(true, true).fadeIn(200);
+        },
+        function() {
+          $(this).removeClass('dropdown-active');
+          $(this).children('.sub-menu').stop(true, true).fadeOut(200);
+        }
+      );
+    }
+  });
+</script>
+
+<style>
+/* Dropdown Menu Styles */
+.hr-main-navigation {
+  position: relative;
+}
+
+.hr-main-navigation .menu-item-has-children {
+  position: relative;
+}
+
+.hr-main-navigation .menu-item-has-children > .menu-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: default;
+  color: hsl(0, 0%, 11%);
+  font-weight: 600;
+}
+
+.hr-main-navigation .menu-item-has-children > .menu-label:hover {
+  opacity: 0.8;
+}
+
+.hr-main-navigation .dropdown-icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.hr-main-navigation .dropdown-active > .menu-label .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.hr-main-navigation .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  min-width: 220px;
+  padding: 10px 0;
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+}
+
+.hr-main-navigation .sub-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.hr-main-navigation .sub-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.hr-main-navigation .sub-menu li a:hover {
+  background-color: #f5f5f5;
+  color: #e54f38;
+  padding-left: 25px;
+}
+
+/* Mobile Dropdown Styles */
+@media (max-width: 768px) {
+  .hr-main-navigation .sub-menu {
+    position: static;
+    box-shadow: none;
+    background: #f9f9f9;
+    border-radius: 0;
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+  
+  .hr-main-navigation .sub-menu li a {
+    padding: 10px 15px;
+  }
+  
+  .hr-main-navigation .sub-menu li a:hover {
+    padding-left: 20px;
+  }
+}
+</style>
+
+<main>
+<div class=" hrl-feature-page ">
+        <section class="hr-section hrl-hero bg-pattern">
+            <h1 class="hr-heading hrl-heading--h1 hrl-hero__title">Explore <span class="hrl-hero__highlight">Employee Management</span> </h1>
+            <p class="hrl-hero__lead">
+            Store and manage all employee records securely in one centralized platform.
+            </p>
+            <div class="hrl-hero__lead-image-container">
+                <!-- <img src="wp-content/themes/diverse-wp-theme-main/assets/images/screenshots/grid.svg"
+                    class="hrl-hero__lead-image-2" width="989" height="614" alt="Product Image" /> -->
+                <img src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/hr-feature-page-hero.svg"
+                    class="hrl-hero__lead-image" width="768" height="477" alt="Product Image" />
+                <!-- <img src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-home-dash-1.png"
+                    class="hrl-hero__lead-image-5" width="400" height="400" alt="Product Image" />
+                <img src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-home-dash-1.png"
+                    class="hrl-hero__lead-image-4" width="400" height="400" alt="Product Image" /> -->
+            </div>
+        </section>
+    </div>
+  <div class="hr-container">
+
+    <section class="hr-section hr-hero">
+   
+
+      <div class="hrl-ft_offer">
+        <div class="container">
+        <h3> Employee Management Features</h3>
+
+          
+          <div class="row">
+            <div class="column">
+                <div class="hrl-ft__content">
+                  <div class="hrl-ft__content-head">
+                    <img src="wp-content/themes/diverse-wp-theme-main/assets/images/feature/people-outline.png"
+                       class="hrl-ft__icon" alt="Centralized Data">
+                    <h2>Centralized Data</h2>
+                  </div>
+                  <p>Store and manage all employee records securely in one place, from personal details to job history and documents.</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="hrl-ft__content">
+                  <div class="hrl-ft__content-head">
+                    <img src="wp-content/themes/diverse-wp-theme-main/assets/images/feature/checkmark-circle-outline.png"
+                      class="hrl-ft__icon" alt="Access Control">
+                    <h2>Role-Based Access</h2>
+                  </div>
+                  <p>Ensure data privacy and security by defining specific access levels for different roles within your organization.</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="hrl-ft__content">
+                  <div class="hrl-ft__content-head">
+                  <img src="wp-content/themes/diverse-wp-theme-main/assets/images/feature/laptop-outline.png"
+                    class="hrl-ft__icon" alt="Self-Service Portal">
+                  <h2>Self-Service</h2>
+                </div>
+                  <p>Empower employees to update their own profiles, request time off, and access payslips.</p>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+  </div>
+</main>
+
+<footer class="hrl-footer">
+    <div class="hrl-footer__container hr-container">
+        
+
+        <div class="hrl-footer__column">
+        <div class="hrl-footer__collapse">
+                <div class="hrl-footer__collapse-head">
+                    <h4>Quick Links</h4>
+                </div>
+                <div class="hrl-footer__collapse-body">
+                    <div class="hrl-footer-navigation-container"><ul id="menu-footer-5" class="menu"><li id="menu-item-9919" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9919"><a href="/">Home</a></li>
+<li id="menu-item-9920" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9920"><a href="/docs/">Documentation</a></li>
+<li id="menu-item-9924" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-55 current_page_item menu-item-9924 active"><a href="index.htmlfeatures/" aria-current="page">Features</a></li>
+<li id="menu-item-9923" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9923"><a href="index.htmlblogs/">Blog</a></li>
+<li id="menu-item-9922" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9922"><a href="index.htmlsitemap/">Sitemap</a></li>
+</ul></div>                </div>
+            </div>
+            
+        </div>
+        <div class="hrl-footer__column">
+            <div class="hrl-footer__collapse">
+                <div class="hrl-footer__collapse-head">
+                    <h4>Discover Diverse</h4>
+                </div>
+                <div class="hrl-footer__collapse-body">
+                    <div class="hrl-footer-navigation-container"><ul id="menu-footer-menu-1" class="menu"><li id="menu-item-1529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1529"><a href="/what-is-diverse/">What is Diverse?</a></li>
+<li id="menu-item-746" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-746"><a href="/web-stories/">Diverse Stories</a></li>
+<li id="menu-item-5356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5356"><a href="index.htmlcompare/">Compare Competitors</a></li>
+<li id="menu-item-6600" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6600"><a href="index.htmllocations/">Client Locations</a></li>
+<li id="menu-item-9981" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9981"><a href="index.htmlpricing/">Support</a></li>
+</ul></div>                </div>
+            </div>
+            
+        </div>
+        <div class="hrl-footer__column">
+            <div class="hrl-footer__collapse">
+                <div class="hrl-footer__collapse-head">
+                    <h4>Features</h4>
+                </div>
+                <div class="hrl-footer__collapse-body">
+                    <div class="hrl-footer-navigation-container"><ul id="menu-footer-menu-2" class="menu"><li id="menu-item-753" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-753"><a href="/features/asset/">Assets</a></li>
+<li id="menu-item-750" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-750"><a href="/features/attendance/">Attendance</a></li>
+<li id="menu-item-749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-749"><a href="/features/employee/">Employee</a></li>
+<li id="menu-item-751" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751"><a href="/features/leave/">Leave</a></li>
+<li id="menu-item-748" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-748"><a href="/features/onboarding/">Onboarding</a></li>
+<li id="menu-item-1448" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1448"><a href="/features/payroll/">Payroll</a></li>
+<li id="menu-item-752" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-752"><a href="/features/pms/">PMS</a></li>
+<li id="menu-item-747" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-747"><a href="/features/recruitment/">Recruitment</a></li>
+<li id="menu-item-5927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5927"><a href="index.htmlfeatures/offboarding/">Offboarding</a></li>
+<li id="menu-item-5928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5928"><a href="index.htmlfeatures/helpdesk/">Helpdesk</a></li>
+</ul></div>
+                </div>
+            </div>
+        </div>
+        <div class="hrl-footer__column">
+            <div class="hrl-footer__collapse">
+                <div class="hrl-footer__collapse-head">
+                    <h4>Source</h4>
+                </div>
+                <div class="hrl-footer__collapse-body">
+                    <div class="hrl-footer-navigation-container"><ul id="menu-footer-menu-3" class="menu"><li id="menu-item-754" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-754"><a href="https://github.com/diverse-opensource/diverse/">GitHub</a></li>
+</ul></div>      
+                </div>
+            </div>
+            <div class="hrl-footer__collapse">
+                <div class="hrl-footer__collapse-head">
+                    <h4>Legal</h4>
+                </div>
+                <div class="hrl-footer__collapse-body">
+                    <div class="hrl-footer-navigation-container"><ul id="menu-footer-menu-4" class="menu"><li id="menu-item-755" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-755"><a href="/privacy-policy/">Privacy Policy</a></li>
+</ul></div>                </div>
+            </div>
+            <div class="hrl-footer__collapse">
+                <div class="hrl-footer__collapse">
+                    <a href="https://play.google.com/store/apps/details?id=com.cybrosys.horilla_project" target="_blank">
+                    <img class="hrl-footer__collapse-image" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/get-it-on-playstore.svg" alt="get it on playstore">
+
+                    </a>
+						    <a href="https://apps.apple.com/in/app/diverse-mobile-app/id6744724397" target="_blank">
+                    <img class="hrl-footer__collapse-image" src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/get-it-on-app-store.png" alt="get it on playstore">
+
+                    </a>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="hrl-footer__bottom-container  hr-container">
+        <span class="hrl-footer__bottom-text">&copy; 2026 Diverse. All rights reserved.</span>
+        <a href="/">
+                    <img src="wp-content/themes/diverse-wp-theme-main/assets/images/home-screenshots/diverse-logo-black.png" class="hrl-footer__logo" width="250" height="40" alt="Diverse" />
+                </a>
+        <!-- <span class="hrl-footer__bottom-text">Built with <ion-icon name="heart-sharp" class="hrl-footer__bottom-heart"></ion-icon> by the cool folks at Diverse</span> -->
+        <ul class="hrl-footer__social-items">
+                    <li class="hrl-footer__social-item">
+                        <a href="https://www.facebook.com/people/Diverse/100091947807253/" class="hrl-footer__social-link" aria-label="Facebook"><ion-icon name="logo-facebook" class="hrl-footer__social-icon" target="_blank"></ion-icon></a>
+                    </li>
+                    <li class="hrl-footer__social-item">
+                        <a href="https://twitter.com/horillahrms" class="hrl-footer__social-link" aria-label="Twitter">
+							<span class="hrl-footer__social-icon" style="display: inline-block; margin-bottom: 4px;">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 18 18" version="1.1">
+								<g id="surface1">
+								<path style=" stroke:none;fill-rule:nonzero;fill:rgb(50.196078%,49.803922%,49.803922%);fill-opacity:1;" d="M 10.675781 7.621094 L 17.230469 0 L 15.679688 0 L 9.984375 6.617188 L 5.4375 0 L 0.191406 0 L 7.070312 10.007812 L 0.191406 18 L 1.746094 18 L 7.761719 11.011719 L 12.5625 18 L 17.808594 18 Z M 8.550781 10.097656 L 7.851562 9.097656 L 2.308594 1.167969 L 4.691406 1.167969 L 9.167969 7.570312 L 9.863281 8.566406 L 15.679688 16.882812 L 13.292969 16.882812 Z M 8.550781 10.097656 "/>
+								</g>
+								</svg>
+						</span>
+						
+						</a>
+                    </li>
+                    <li class="hrl-footer__social-item">
+                        <a href="https://www.instagram.com/horillahrms/" class="hrl-footer__social-link" aria-label="Instagram"><ion-icon name="logo-instagram" class="hrl-footer__social-icon" target="_blank"></ion-icon></a>
+                    </li>
+                    <li class="hrl-footer__social-item">
+                        <a href="https://www.linkedin.com/company/diverse/" class="hrl-footer__social-link" aria-label="Linkedin"><ion-icon name="logo-linkedin" class="hrl-footer__social-icon" target="_blank"></ion-icon></a>
+                    </li>
+                    <li class="hrl-footer__social-item">
+                        <a href="https://github.com/diverse-opensource/diverse/" class="hrl-footer__social-link" aria-label="Github" target="_blank"><ion-icon name="logo-github" class="hrl-footer__social-icon"></ion-icon></a>
+                    </li>
+                    <li class="hrl-footer__social-item">
+                        <a href="https://www.youtube.com/channel/UCvD8feLT7EKmXHaPKnWZT-w" class="hrl-footer__social-link" aria-label="YouTube" target="_blank"><ion-icon name="logo-youtube" class="hrl-footer__social-icon"></ion-icon></a>
+                    </li>
+                </ul>
+    </div>
+</footer>
+ 
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/diverse-wp-theme-main\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="index.htmlwp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="text/javascript" src="index.htmlwp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.1" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.diverse.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+/* ]]> */
+</script>
+<script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.1" id="contact-form-7-js"></script>
+<script type="text/javascript" src="wp-content/plugins/country-phone-field-contact-form-7/assets/js/intlTelInput.min.js?ver=6.8.2" id="nbcpf-intlTelInput-script-js"></script>
+<script type="text/javascript" id="nbcpf-countryFlag-script-js-extra">
+/* <![CDATA[ */
+var nbcpf = {"ajaxurl":"https:\/\/www.diverse.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="wp-content/plugins/country-phone-field-contact-form-7/assets/js/countrySelect.min.js?ver=6.8.2" id="nbcpf-countryFlag-script-js"></script>
+<script type="text/javascript" id="nbcpf-countryFlag-script-js-after">
+/* <![CDATA[ */
+		(function($) {
+			$(function() {
+				$(".wpcf7-countrytext").countrySelect({
+					
+				});
+				$(".wpcf7-phonetext").intlTelInput({
+					autoHideDialCode: true,
+					autoPlaceholder: true,
+					nationalMode: false,
+					separateDialCode: true,
+					hiddenInput: "full_number",
+						
+				});
+
+				$(".wpcf7-phonetext").each(function () {
+					var hiddenInput = $(this).attr('name');
+					//console.log(hiddenInput);
+					var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+					$("input[name="+hiddenInput+"-country-code]").val(dial_code);
+				});
+				
+				$(".wpcf7-phonetext").on("countrychange", function() {
+					// do something with iti.getSelectedCountryData()
+					//console.log(this.value);
+					var hiddenInput = $(this).attr("name");
+					var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+					$("input[name="+hiddenInput+"-country-code]").val(dial_code);
+					
+				});
+					
+					var isMobile = /Android.+Mobile|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+					$(".wpcf7-phonetext").on("keyup", function() {
+						var dial_code = $(this).siblings(".flag-container").find(".selected-flag .selected-dial-code").text();
+						
+						var value   = $(this).val();
+						if(value == "+")
+							$(this).val("");
+						else if(value.indexOf("+") == "-1")
+							$(this).val(dial_code + value);
+						else if(value.indexOf("+") > 0)
+							$(this).val(dial_code + value.substring(dial_code.length));
+					});$(".wpcf7-countrytext").on("keyup", function() {
+					var country_name = $(this).siblings(".flag-dropdown").find(".country-list li.active span.country-name").text();
+					if(country_name == "")
+					var country_name = $(this).siblings(".flag-dropdown").find(".country-list li.highlight span.country-name").text();
+					
+					var value   = $(this).val();
+					//console.log(country_name, value);
+					$(this).val(country_name + value.substring(country_name.length));
+				});
+				
+			});
+		})(jQuery);
+/* ]]> */
+</script>
+<script type="text/javascript" id="cr-plugin-script-js-extra">
+/* <![CDATA[ */
+var cr_ajax_object = {"ajax_url":"https:\/\/www.diverse.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="wp-content/plugins/customer-request-plugin/js/script.js?ver=1.0" id="cr-plugin-script-js"></script>
+<script type="text/javascript" src="wp-content/plugins/flexy-breadcrumb/public/js/flexy-breadcrumb-public.js?ver=1.2.1" id="flexy-breadcrumb-js"></script>
+<script type="text/javascript" src="wp-content/themes/diverse-wp-theme-main/build/bundle.js?ver=1.0" id="diverse-custom-script-js"></script>
+<script type="text/javascript" id="live-search-js-extra">
+/* <![CDATA[ */
+var liveSearch = {"ajax_url":"https:\/\/www.diverse.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="wp-content/themes/diverse-wp-theme-main/live-search.js" id="live-search-js"></script>
+<script type="text/javascript" src="wp-content/themes/diverse-wp-theme-main/assets/js/toggle-section.js" id="diverse-toggle-section-js"></script>
+
+</body>
+
+</html>
+<!-- plugin=object-cache-pro client=phpredis metric#hits=2675 metric#misses=16 metric#hit-ratio=99.4 metric#bytes=686684 metric#prefetches=149 metric#store-reads=29 metric#store-writes=5 metric#store-hits=161 metric#store-misses=10 metric#sql-queries=16 metric#ms-total=106.36 metric#ms-cache=9.71 metric#ms-cache-avg=0.2944 metric#ms-cache-ratio=9.1 sample#redis-hits=110399142 sample#redis-misses=7361011 sample#redis-hit-ratio=93.8 sample#redis-ops-per-sec=11 sample#redis-evicted-keys=2892043 sample#redis-used-memory=66297728 sample#redis-used-memory-rss=40144896 sample#redis-memory-fragmentation-ratio=0.6 sample#redis-connected-clients=1 sample#redis-tracking-clients=0 sample#redis-rejected-connections=0 sample#redis-keys=74020 -->
