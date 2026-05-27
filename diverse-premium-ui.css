@@ -252,6 +252,24 @@ h1, h2, h3, h4, h5, h6, .hrl-hero-title, .diverse-hero-title {
     gap: 15px;
 }
 
+/* 4. Enhanced Typography & Hero Styles */
+.diverse-hero-title {
+    font-size: 4.5rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 25px !important;
+    color: #ffffff !important;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+}
+
+.hrl-hero__highlight {
+    background: linear-gradient(90deg, #38bdf8, #8b5cf6) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    display: inline-block;
+}
+
 .diverse-masonry-item .hr-feature-item__title {
     font-size: 1.5rem !important;
     font-weight: 700 !important;
