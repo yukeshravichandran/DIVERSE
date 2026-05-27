@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Diverse HRMS</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f2fe; /* Light blue background */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 450px;
+            padding: 40px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0d47a1;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+        .row .input-group {
+            flex: 1;
+        }
+        .login-btn {
+            background-color: #0d6efd;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .login-btn:hover {
+            background-color: #0b5ed7;
+        }
+        .footer-links {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        .footer-links a {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="logo">Diverse</div>
+        <div class="subtitle">Create your organization account</div>
+        
+        <form action="dashboard.html" method="GET">
+            <div class="row">
+                <div class="input-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" placeholder="John" required>
+                </div>
+                <div class="input-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" placeholder="Doe" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" placeholder="Acme Corp" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Work Email</label>
+                <input type="email" id="email" placeholder="name@company.com" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Create Password</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="login-btn">Start Free Trial</button>
+        </form>
+        
+        <div class="footer-links">
+            <p>Already have an account? <a href="login.html">Sign in</a></p>
+            <p><a href="index.html">← Back to Home</a></p>
+        </div>
+    </div>
+</body>
+</html>

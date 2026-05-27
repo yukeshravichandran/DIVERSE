@@ -1,0 +1,89 @@
+/* 
+=========================================================
+   DIVERSE HRMS - TOTAL UI REDESIGN THEME
+   Forces Deep Blue across all pages, stripping orange.
+========================================================= 
+*/
+
+:root {
+    /* Override Elementor and WordPress global variables */
+    --e-global-color-primary: #0d47a1 !important;
+    --e-global-color-secondary: #0b3c8a !important;
+    --e-global-color-text: #ffffff !important;
+    --e-global-color-accent: #0d6efd !important;
+    --hr-primary-color: #0d47a1 !important;
+    --hr-secondary-color: #0d6efd !important;
+}
+
+/* Force dark blue on main backgrounds */
+body, html, main, .elementor-section, .hr-header, footer, .hrl-hero-section {
+    background-color: #0d47a1 !important;
+    color: #ffffff !important;
+}
+
+/* Strip out all orange background colors and force blue */
+[style*="background-color: #e54f38"],
+[style*="background-color:#e54f38"],
+[style*="background: #e54f38"],
+[style*="background:#e54f38"],
+[style*="background-color: #f96b24"],
+.bg-orange, .elementor-button, .hrl-btn {
+    background-color: #0d6efd !important; /* Lighter blue for interactive elements */
+    border-color: #0d6efd !important;
+    color: #ffffff !important;
+}
+
+/* Text Colors */
+h1, h2, h3, h4, h5, h6, p, span, li, a {
+    color: #ffffff !important;
+}
+
+/* Specific text color overrides for orange text */
+[style*="color: #e54f38"],
+[style*="color:#e54f38"],
+[style*="color: #f96b24"] {
+    color: #90caf9 !important; /* Light blue accent for text */
+}
+
+/* Button UI Redesign */
+button, .elementor-button, .btn, .hrl-btn, a[class*="btn"], a[class*="button"] {
+    background-color: #0d6efd !important;
+    color: #ffffff !important;
+    border-radius: 50px !important; /* Pill shape for modern look */
+    border: none !important;
+    padding: 12px 28px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Button Hover State */
+button:hover, .elementor-button:hover, .btn:hover, .hrl-btn:hover, a[class*="btn"]:hover, a[class*="button"]:hover {
+    background-color: #ffffff !important;
+    color: #0d6efd !important;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Hide all old image logos permanently */
+img[src*="logo"] {
+    display: none !important;
+}
+
+/* Clean up card and box backgrounds to contrast with deep blue */
+.elementor-widget-container, .card, .box, .pricing-card {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    backdrop-filter: blur(10px) !important; /* Glassmorphism effect */
+}
+
+/* Navigation Links */
+.hr-header a, .nav-menu a {
+    font-weight: 600 !important;
+}
+.hr-header a:hover, .nav-menu a:hover {
+    color: #90caf9 !important;
+}

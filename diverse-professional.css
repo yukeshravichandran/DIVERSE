@@ -1,0 +1,52 @@
+/* 
+=========================================================
+   DIVERSE HRMS - PROFESSIONAL UI RESTORATION
+   Gracefully injects Deep Blue without breaking layout
+========================================================= 
+*/
+
+:root {
+    /* Override Horilla's Global CSS Variables */
+    --hr-primary-color: #0d47a1 !important;
+    --hr-secondary-color: #0d6efd !important;
+    --hr-primary-color-rgb: 13, 71, 161 !important;
+    --hr-secondary-color-rgb: 13, 110, 253 !important;
+    --hr-primary-color-alt: #0b3c8a !important;
+    
+    --e-global-color-primary: #0d47a1 !important;
+    --e-global-color-secondary: #0b3c8a !important;
+    --e-global-color-accent: #0d6efd !important;
+}
+
+/* Gracefully hide Horilla Mascot Logos */
+img[src*="logo-mascot"], 
+img[src*="horilla-logo"],
+.hr-header__logo img,
+.footer-widget__logo img {
+    display: none !important;
+}
+
+/* Hard override on any remaining orange backgrounds */
+[style*="background-color: #e54f38"],
+[style*="background-color:#e54f38"],
+[style*="background: #e54f38"],
+[style*="background:#e54f38"],
+[style*="background-color: #f96b24"],
+.bg-orange {
+    background-color: var(--hr-primary-color) !important;
+    border-color: var(--hr-primary-color) !important;
+    color: #ffffff !important;
+}
+
+/* Text Colors */
+[style*="color: #e54f38"],
+[style*="color:#e54f38"],
+[style*="color: #f96b24"] {
+    color: var(--hr-secondary-color) !important; 
+}
+
+/* Ensure Owl Carousel items display nicely and are not overridden */
+/* We just let them use the default layout, but we can enhance the buttons slightly */
+.hrl-btn, .btn, a[class*="button"], button {
+    border-radius: 8px !important;
+}

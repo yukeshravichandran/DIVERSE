@@ -1,0 +1,88 @@
+/* 
+=========================================================
+   DIVERSE HRMS - TRUE TILE UI OVERRIDE
+   Targets the actual Horilla classes: hr-feature-item, etc.
+========================================================= 
+*/
+
+/* Global Layout Resets */
+body, html, main, .hr-header, .hrl-hero-section, footer, section {
+    background-color: #0d47a1 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+/* 
+====================================
+   TILE GRID LAYOUT SYSTEM
+==================================== 
+*/
+/* The actual Horilla feature lists and modules */
+.hrl-features-list, .hr-features__list, .hrl-pricing-cards, .diverse-tiles-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 30px !important;
+    margin-top: 40px !important;
+    padding: 0 !important;
+}
+
+/* Make every item a distinct TILE */
+.hr-feature-item, .hrl-home-modules, .hrl-pricing-card, .ad-banner-card, .hrl-docs-module-label {
+    background: linear-gradient(145deg, #1254b8, #0a3d8f) !important;
+    border: none !important;
+    border-left: 6px solid #00d2ff !important; /* Bright cyan accent line */
+    border-radius: 12px !important; 
+    padding: 35px 25px !important;
+    box-shadow: 5px 15px 35px rgba(0, 0, 0, 0.4) !important;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease !important;
+    margin: 0 !important; 
+    width: 100% !important; 
+    display: block !important;
+}
+
+/* Tile Hover Animation */
+.hr-feature-item:hover, .hrl-home-modules:hover, .hrl-pricing-card:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 20px 45px rgba(0, 210, 255, 0.3) !important;
+    border-left: 6px solid #ffffff !important; 
+}
+
+/* Typography Constraints inside Tiles */
+h1, h2, h3, h4, h5, h6, p, span, li, a {
+    color: #ffffff !important;
+}
+
+/* Icon / SVG forced color inside tiles */
+i, svg, path {
+    fill: #00d2ff !important;
+    color: #00d2ff !important;
+}
+
+/* New Modern Buttons */
+button, .btn, .hrl-btn, a[class*="btn"], a[class*="button"], .hrl-link {
+    display: inline-block !important;
+    background-color: #0d6efd !important;
+    color: #ffffff !important;
+    border-radius: 50px !important; /* Pill shape */
+    border: none !important;
+    padding: 12px 25px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4) !important;
+    transition: all 0.3s ease-in-out !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+button:hover, .btn:hover, .hrl-btn:hover, a[class*="btn"]:hover, a[class*="button"]:hover, .hrl-link:hover {
+    background-color: #ffffff !important;
+    color: #0d6efd !important;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Hide images that look weird in the new tiles (like the giant SVGs) */
+.hr-feature-item__icon-container, .hrl-modules__screenshot-div {
+    display: none !important;
+}

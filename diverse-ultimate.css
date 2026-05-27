@@ -1,0 +1,92 @@
+/* 
+=========================================================
+   DIVERSE HRMS - ULTIMATE DARK BLUE THEME
+========================================================= 
+*/
+
+:root {
+    --div-bg-main: #0a1128;
+    --div-bg-card: #121f42;
+    --div-accent: #00d2ff;
+    --div-text-main: #f8fafc;
+    --div-text-muted: #94a3b8;
+}
+
+/* 1. Global Backgrounds & Text */
+body, html, main, footer, header, .hr-header, .hr-footer {
+    background-color: var(--div-bg-main) !important;
+    background-image: none !important;
+    color: var(--div-text-main) !important;
+}
+
+/* Force all structural sections to be dark */
+section, .section, .hr-container, .hrl-hero-section, .hrl-home-modules-section {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* 2. Fix Typography Visibility */
+h1, h2, h3, h4, h5, h6, 
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+p, span, a, li, label, input, textarea, strong, b, i {
+    color: var(--div-text-main) !important;
+    font-family: 'Inter', 'Segoe UI', sans-serif !important;
+}
+
+p, span, li, label {
+    color: var(--div-text-muted) !important;
+}
+
+a {
+    color: var(--div-accent) !important;
+    text-decoration: none !important;
+}
+
+/* 3. Modernize Cards & Modules */
+.hrl-pricing-card, .hrl-home-modules, .hr-feature-item, .card, .box, .hr-features__item {
+    background-color: var(--div-bg-card) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    padding: 30px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.hrl-pricing-card:hover, .hrl-home-modules:hover, .hr-feature-item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 40px rgba(0, 210, 255, 0.2) !important;
+    border-color: var(--div-accent) !important;
+}
+
+/* 4. Sleek Buttons */
+button, .btn, .hrl-btn, .hrl-primary-button, .hrl-secondary-button {
+    background: linear-gradient(135deg, #0d6efd, #00d2ff) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 12px 28px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4) !important;
+}
+
+button:hover, .btn:hover, .hrl-btn:hover {
+    background: linear-gradient(135deg, #00d2ff, #0d6efd) !important;
+    transform: scale(1.05) !important;
+    color: #ffffff !important;
+}
+
+/* 5. Hide clunky SVGs and fix images */
+svg, img[src$=".svg"] {
+    display: none !important;
+}
+
+img {
+    border-radius: 12px !important;
+    opacity: 0.9 !important;
+}
+
+/* Hide Orange Specifically */
+.bg-orange, [style*="#e54f38"] {
+    background-color: var(--div-accent) !important;
+}

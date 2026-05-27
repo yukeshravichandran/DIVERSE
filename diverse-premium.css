@@ -1,0 +1,102 @@
+/* 
+=========================================================
+   DIVERSE HRMS - PREMIUM GLASSMORPHISM THEME
+========================================================= 
+*/
+
+/* 1. Global Animated Gradient Background */
+body, html, main, .hr-wrapper, .hrl-hero-section, footer, header {
+    background: linear-gradient(-45deg, #050b14, #0a192f, #0d2a59, #050b14) !important;
+    background-size: 400% 400% !important;
+    animation: gradientBG 15s ease infinite !important;
+    color: #f8fafc !important;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Ensure no native backgrounds overwrite our animated mesh */
+section, .section, .hr-container, .hrl-home-modules-section, .hr-footer, .hr-header, .hrl-blog-card {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* 2. Glassmorphism Tiles */
+.hrl-pricing-card, .hrl-home-modules, .hr-feature-item, .box, .card, .hr-features__item, .hrl-blog-card, .hrl-docs-module-label, .hrl-testimonial-item {
+    background: rgba(255, 255, 255, 0.03) !important; /* Extremely translucent */
+    backdrop-filter: blur(16px) !important;           /* Frosted glass blur */
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Crisp glass edge */
+    border-radius: 20px !important;                   /* Sleek modern curves */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important; /* Deep shadow for depth */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+/* Hover Effect: Glow and Lift */
+.hrl-pricing-card:hover, .hrl-home-modules:hover, .hr-feature-item:hover, .hrl-blog-card:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(0, 210, 255, 0.5) !important;
+    box-shadow: 0 15px 45px rgba(0, 210, 255, 0.2) !important;
+    transform: translateY(-8px) scale(1.02) !important;
+}
+
+/* 3. Typography Adjustments for Dark Glass */
+h1, h2, h3, h4, h5, h6, 
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px !important;
+}
+
+p, span, li, label, div:not([class]) {
+    color: #cbd5e1 !important; /* Soft silver for readability */
+}
+
+a {
+    color: #38bdf8 !important; /* Bright cyan for links */
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #0ea5e9 !important;
+}
+
+/* 4. Glass Buttons */
+button, .btn, .hrl-btn, .hrl-primary-button, .hrl-secondary-button {
+    background: rgba(13, 110, 253, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(13, 110, 253, 0.5) !important;
+    color: #ffffff !important;
+    border-radius: 30px !important; /* Pill shape */
+    padding: 12px 30px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+button:hover, .btn:hover, .hrl-btn:hover {
+    background: rgba(13, 110, 253, 0.8) !important;
+    border-color: #00d2ff !important;
+    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.4) !important;
+    transform: scale(1.05) !important;
+    color: #ffffff !important;
+}
+
+/* Hide Specific Horilla Artifacts that ruin the glass look */
+svg, img[src$=".svg"], .hrl-owl-carousel-navigation, .hr-feature-item__icon-container {
+    display: none !important;
+}
+
+img {
+    border-radius: 12px !important;
+    opacity: 0.9 !important; /* Subtle fade to blend with background */
+}
+
+/* Hide the App Download Banner */
+.hr-banner-wrapper, #ad-banner { display: none !important; }

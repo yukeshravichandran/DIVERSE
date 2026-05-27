@@ -1,0 +1,119 @@
+/* 
+=========================================================
+   DIVERSE HRMS - CLOUD AESTHETIC THEME
+========================================================= 
+*/
+
+/* 1. Global Animated Sky Background */
+body, html, main, .hr-wrapper, .hrl-hero-section, footer, header {
+    background: linear-gradient(-45deg, #e0f2fe, #f0f9ff, #bae6fd, #e0f2fe) !important;
+    background-size: 400% 400% !important;
+    animation: gradientBG 15s ease infinite !important;
+    color: #0f172a !important; /* Dark text for readability on light sky */
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Ensure no native backgrounds overwrite our animated mesh */
+section, .section, .hr-container, .hrl-home-modules-section, .hr-footer, .hr-header, .hrl-blog-card {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* 2. Soft Cloud Tiles (Replacing Glassmorphism) */
+.hrl-pricing-card, .hrl-home-modules, .hr-feature-item, .box, .card, .hr-features__item, .hrl-blog-card, .hrl-docs-module-label, .hrl-testimonial-item {
+    background: #ffffff !important;                   /* Solid white like a cloud */
+    border: none !important;                          /* No harsh borders */
+    border-radius: 40px !important;                   /* Extremely round like clouds */
+    box-shadow: 0 15px 35px rgba(14, 165, 233, 0.1) !important; /* Soft, fluffy drop shadow */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    backdrop-filter: none !important;                 /* Remove the glass blur */
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Hover Effect: Soft Cloud Float */
+.hrl-pricing-card:hover, .hrl-home-modules:hover, .hr-feature-item:hover, .hrl-blog-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 25px 45px rgba(14, 165, 233, 0.2) !important; /* Deeper fluffy shadow */
+}
+
+/* 3. Typography Adjustments for Light Clouds */
+h1, h2, h3, h4, h5, h6, 
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+    color: #0369a1 !important; /* Deep sky blue for headings */
+    font-weight: 700 !important;
+    letter-spacing: -0.5px !important;
+}
+
+p, span, li, label, div:not([class]) {
+    color: #334155 !important; /* Slate grey for text */
+}
+
+a {
+    color: #0284c7 !important; /* Bright blue for links */
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #0ea5e9 !important;
+}
+
+/* 4. Soft Cloud Buttons */
+button, .btn, .hrl-btn, .hrl-primary-button, .hrl-secondary-button {
+    background: #0ea5e9 !important; /* Solid bright blue */
+    border: none !important;
+    color: #ffffff !important;
+    border-radius: 30px !important; /* Pill shape */
+    padding: 12px 30px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+button:hover, .btn:hover, .hrl-btn:hover {
+    background: #0284c7 !important;
+    box-shadow: 0 12px 25px rgba(14, 165, 233, 0.5) !important;
+    transform: translateY(-3px) !important;
+    color: #ffffff !important;
+}
+
+/* 5. Override Logo Display since we are injecting a new D logo */
+/* We will show our new logo and hide the old ones */
+img[src*="logo-mascot"], 
+img[src*="horilla-logo"],
+.hr-header__logo img:not(.diverse-custom-logo),
+.footer-widget__logo img:not(.diverse-custom-logo) {
+    display: none !important;
+}
+
+.diverse-custom-logo {
+    display: inline-block !important;
+    height: 45px;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Hide the highlight squiggle under the hero text */
+.hrl-hero__highlight:before {
+    display: none !important;
+}
+
+/* Force-hide any 3rd-party chat widgets that might be injecting Nancy */
+iframe[src*="chat"], .chat-widget, #chat-widget-container {
+    display: none !important;
+}
+
+img {
+    border-radius: 20px !important; /* Soft corners for all standard images */
+}
+
+/* Clean up remnants */
+svg, img[src$=".svg"], .hrl-owl-carousel-navigation, .hr-feature-item__icon-container {
+    display: none !important;
+}
