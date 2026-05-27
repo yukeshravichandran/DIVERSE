@@ -280,6 +280,22 @@ h6,
     box-shadow: none !important;
     padding: 0 !important;
 }
+
+.hr-blog-search-icon {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    color: #ffffff !important;
+    border-radius: 0 !important;
+}
+
+.hr-blog-search-icon:hover {
+    background: transparent !important;
+    transform: none !important;
+    box-shadow: none !important;
+    color: #00d2ff !important;
+}
 .diverse-hero-title {
     font-family: 'Cinzel', serif !important;
     font-size: 4.5rem !important;
