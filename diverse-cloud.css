@@ -130,3 +130,8 @@ iframe[src*="chat"], iframe[src*="widget"], iframe[src*="zohopublic"], iframe[sr
 .help-icon, .support-icon, .floating-button, #whatsapp-widget {
     display: none !important;
 }
+
+/* Hide orange highlight icon in hero title */
+.hrl-hero__title:after {
+    display: none !important;
+}
