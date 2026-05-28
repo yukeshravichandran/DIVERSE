@@ -49,7 +49,7 @@
 
               <li
                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children menu-item-12134 active"
-                id="menu-item-12134"><span class="menu-label">Features</span>
+                id="menu-item-12134"><span class="menu-label">Features<span class="dropdown-icon"><ion-icon name="chevron-down-outline"></ion-icon></span></span>
                 <ul class="sub-menu">
                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1199"
                     id="menu-item-1199"><a href="index.htmlfeatures/">HR</a></li>
@@ -68,7 +68,7 @@
                   href="/videos/">Videos</a></li>
               <li
                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children menu-item-11595 active"
-                id="menu-item-11595"><span class="menu-label">Pricing</span>
+                id="menu-item-11595"><span class="menu-label">Pricing<span class="dropdown-icon"><ion-icon name="chevron-down-outline"></ion-icon></span></span>
                 <ul class="sub-menu">
                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9996"
                     id="menu-item-9996"><a href="index.htmlpricing/">Support</a></li>
@@ -251,7 +251,8 @@
       transition: transform 0.3s ease;
     }
 
-    .hr-main-navigation .dropdown-active>.menu-label .dropdown-icon {
+    .hr-main-navigation .dropdown-active>.menu-label .dropdown-icon,
+    .hr-main-navigation .menu-item-has-children:hover>.menu-label .dropdown-icon {
       transform: rotate(180deg);
     }
 
@@ -268,6 +269,13 @@
       z-index: 1000;
       list-style: none;
       margin: 0;
+    }
+
+    /* CSS Fallback for hover */
+    @media (min-width: 769px) {
+      .hr-main-navigation .menu-item-has-children:hover .sub-menu {
+        display: block !important;
+      }
     }
 
     .hr-main-navigation .sub-menu li {
